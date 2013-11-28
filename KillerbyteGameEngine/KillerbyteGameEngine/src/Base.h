@@ -35,4 +35,8 @@
 #define DEG2RAD (PI / 180.0)
 #define RAD2DEG (180.0 / PI)
 
+// A nice function for checking array size
+template <typename T, unsigned S>
+inline unsigned arraysize(const T(&v)[S]) { return S; }
+
 #endif

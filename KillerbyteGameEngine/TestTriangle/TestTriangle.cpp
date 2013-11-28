@@ -51,39 +51,7 @@ void TestTriangle::Render(float elapsedTime)
 
 	glUseProgram(shader.GetProgram());
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	glEnableVertexAttribArray(0);
-
-	glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (GLfloat*)&mvpMatrix(0, 0));
-	glDrawElements(GL_TRIANGLES, sizeof(vIndices) / sizeof(vIndices[0]), GL_UNSIGNED_BYTE, 0);
-}
-
-GLuint TestTriangle::LoadShader(GLenum type, const char* source)
-{
-	GLuint shader;
-	GLint compiled;
-
-	shader = glCreateShader(type);
-
-	if (shader == 0)
-	{
-		return 0;
-	}
-
-	glShaderSource(shader, 1, &source, NULL);
-
-	glCompileShader(shader);
-
-	glGetShaderiv(shader, GL_COMPILE_STATUS, &compiled);
-
-	if (!compiled)
-	{
-		// Log that there is an error
-		glDeleteShader(shader);
-		return 0;
-	}
-
-	return shader;
+	rectangle.Render(elapsedTime, mvpMatrix, mvpMatrixHandle);
 }
 
 void TestTriangle::InitRectangle()
@@ -111,19 +79,7 @@ void TestTriangle::InitRectangle()
 
 	mvpMatrixHandle = glGetUniformLocation(shader.GetProgram(), "MVPMatrix");
 
-	// Create both VBOs
-	glGenBuffers(2, &rectangleInfo[0]);
-
-	// Set up the vertex buffer
-	glBindBuffer(GL_ARRAY_BUFFER, rectangleInfo[0]);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vVertices), vVertices, GL_STATIC_DRAW);
-
-	// Set up the index buffer
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, rectangleInfo[1]);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(vIndices), vIndices, GL_STATIC_DRAW);
-}
-
-void TestTriangle::DrawRectangle()
-{
-
+	rectangle.LoadVertices(vVertices, arraysize(vVertices));
+	rectangle.LoadIndices(vIndices, arraysize(vIndices));
+	rectangle.Initialize();
 }

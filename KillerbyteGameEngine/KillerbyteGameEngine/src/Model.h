@@ -10,6 +10,7 @@
 
 #include "Base.h"
 #include "Object.h"
+#include "Matrix44.h"
 #include <vector>
 
 namespace KillerbyteGameEngine
@@ -21,15 +22,19 @@ namespace KillerbyteGameEngine
 		~Model();
 	
 		//void LoadData(std::vector<T> data, std::vector<T> newData);
+		void LoadVertices(GLfloat* data, int length);
+		void LoadIndices(GLubyte* data, int length);
 
 		void Initialize();
 		void Update(float elapsedTime);
-		void Render(float elapsedTime);
+		// This will eventually go back to only one parameter
+		// Shader will eventually become a member of Model
+		void Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle); 
 	private:
 		std::vector<GLfloat> vertices;
 		std::vector<GLubyte> indices;
 
-		GLint info[2]; // Buffer data
+		GLuint info[2]; // Buffer data
 	};
 }
 

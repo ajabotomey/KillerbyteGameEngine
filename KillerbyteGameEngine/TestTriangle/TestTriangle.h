@@ -21,7 +21,6 @@ protected:
 private: // Methods
 	GLuint LoadShader(GLenum type, const char* source);
 	void InitRectangle(); // These will eventually be in its own object but for now, we use these to demo 
-	void DrawRectangle(); // that we can display VBO objects
 
 private: // Variables
 	GLuint program;
@@ -31,6 +30,7 @@ private: // Variables
 	GLint mvpMatrixHandle;
 
 	GLuint rectangleInfo[2];
+	Model rectangle;
 	Shader shader;
 };
 
