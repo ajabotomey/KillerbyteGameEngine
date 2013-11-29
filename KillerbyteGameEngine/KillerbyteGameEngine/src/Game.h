@@ -2,6 +2,7 @@
 #define GAME_H_
 
 #include "Camera.h"
+#include "Keyboard.h"
 
 namespace KillerbyteGameEngine
 {
@@ -28,6 +29,9 @@ namespace KillerbyteGameEngine
 
 		unsigned int GetWidth() const;
 		unsigned int GetHeight() const;
+
+		// Special Input Events unique for each game
+		virtual void KeyEvent(Keyboard::KeyEvent evt, int key);
 	protected:
 		Game();
 		virtual void Initialize() = 0;

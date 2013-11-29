@@ -128,4 +128,9 @@ namespace KillerbyteGameEngine
 	{
 		return height;
 	}
+
+	void Game::KeyEvent(Keyboard::KeyEvent evt, int key)
+	{
+
+	}
 }

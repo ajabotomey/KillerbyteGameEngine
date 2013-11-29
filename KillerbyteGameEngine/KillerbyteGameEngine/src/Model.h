@@ -34,9 +34,11 @@ namespace KillerbyteGameEngine
 
 		// Accessors
 		inline Matrix44 GetModelMatrix() { return modelMatrix; }
+		inline Vector3 GetPosition() { return position;  }
 
 		// Mutators
 		void SetPosition(Vector3 newPosition);
+		inline void SetPositionX(float x) { position.setX(x); }
 	private:
 		std::vector<GLfloat> vertices;
 		std::vector<GLubyte> indices;

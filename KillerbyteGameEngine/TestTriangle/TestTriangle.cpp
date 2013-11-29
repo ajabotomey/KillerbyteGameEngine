@@ -88,3 +88,47 @@ void TestTriangle::InitRectangle()
 	rectangle.LoadIndices(vIndices, arraysize(vIndices));
 	rectangle.Initialize();
 }
+
+void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
+{
+	float x;
+
+	if (evt == Keyboard::KEY_DOWN)
+	{
+		switch (key)
+		{
+		case Keyboard::KEY_A:
+		case Keyboard::KEY_CAP_A:
+		case Keyboard::KEY_LEFTARROW:
+			x = rectangle.GetPosition().getX() - 0.005;
+			rectangle.SetPositionX(x);
+			break;
+
+		case Keyboard::KEY_D:
+		case Keyboard::KEY_CAP_D:
+		case Keyboard::KEY_RIGHTARROW:
+			x = rectangle.GetPosition().getX() + 0.005;
+			rectangle.SetPositionX(x);
+			break;
+		}
+	}
+	else if (evt == Keyboard::KEY_UP)
+	{
+		switch (key)
+		{
+		case Keyboard::KEY_A:
+		case Keyboard::KEY_CAP_A:
+		case Keyboard::KEY_LEFTARROW:
+			x = rectangle.GetPosition().getX() + 0.005;
+			rectangle.SetPositionX(x);
+			break;
+
+		case Keyboard::KEY_D:
+		case Keyboard::KEY_CAP_D:
+		case Keyboard::KEY_RIGHTARROW:
+			x = rectangle.GetPosition().getX() - 0.005;
+			rectangle.SetPositionX(x);
+			break;
+		}
+	}
+}

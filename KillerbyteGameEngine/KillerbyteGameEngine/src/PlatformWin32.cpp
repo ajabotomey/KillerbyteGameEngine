@@ -21,18 +21,158 @@ static double ticksPerMilli;
 static double startTime;
 static double absoluteTime;
 
+// Special Key accessor. Take in a WPARAM and map that to a key in the keyboard class
+static KillerbyteGameEngine::Keyboard::Key getKey(WPARAM keyCode, bool shiftKeyDown)
+{
+	switch (keyCode)
+	{
+	case VK_ESCAPE:
+		return KillerbyteGameEngine::Keyboard::KEY_ESCAPE;
+	case VK_SHIFT:
+	case VK_LSHIFT:
+	case VK_RSHIFT:
+		return KillerbyteGameEngine::Keyboard::KEY_SHIFT;
+	case VK_LEFT:
+		return KillerbyteGameEngine::Keyboard::KEY_LEFTARROW;
+	case VK_RIGHT:
+		return KillerbyteGameEngine::Keyboard::KEY_RIGHTARROW;
+	case VK_UP:
+		return KillerbyteGameEngine::Keyboard::KEY_UPARROW;
+	case VK_DOWN:
+		return KillerbyteGameEngine::Keyboard::KEY_DOWNARROW;
+	case 0x41:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_A : KillerbyteGameEngine::Keyboard::KEY_A;
+	case 0x42:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_B : KillerbyteGameEngine::Keyboard::KEY_B;
+	case 0x43:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_C : KillerbyteGameEngine::Keyboard::KEY_C;
+	case 0x44:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_D : KillerbyteGameEngine::Keyboard::KEY_D;
+	case 0x45:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_E : KillerbyteGameEngine::Keyboard::KEY_E;
+	case 0x46:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_F : KillerbyteGameEngine::Keyboard::KEY_F;
+	case 0x47:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_G : KillerbyteGameEngine::Keyboard::KEY_G;
+	case 0x48:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_H : KillerbyteGameEngine::Keyboard::KEY_H;
+	case 0x49:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_I : KillerbyteGameEngine::Keyboard::KEY_I;
+	case 0x50:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_J : KillerbyteGameEngine::Keyboard::KEY_J;
+	case 0x51:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_K : KillerbyteGameEngine::Keyboard::KEY_K;
+	case 0x52:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_L : KillerbyteGameEngine::Keyboard::KEY_L;
+	case 0x53:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_M : KillerbyteGameEngine::Keyboard::KEY_M;
+	case 0x54:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_N : KillerbyteGameEngine::Keyboard::KEY_N;
+	case 0x55:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_O : KillerbyteGameEngine::Keyboard::KEY_O;
+	case 0x56:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_P : KillerbyteGameEngine::Keyboard::KEY_O;
+	case 0x57:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_Q : KillerbyteGameEngine::Keyboard::KEY_Q;
+	case 0x58:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_R : KillerbyteGameEngine::Keyboard::KEY_R;
+	case 0x59:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_S : KillerbyteGameEngine::Keyboard::KEY_S;
+	case 0x60:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_T : KillerbyteGameEngine::Keyboard::KEY_T;
+	case 0x61:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_U : KillerbyteGameEngine::Keyboard::KEY_U;
+	case 0x62:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_V : KillerbyteGameEngine::Keyboard::KEY_V;
+	case 0x63:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_W : KillerbyteGameEngine::Keyboard::KEY_W;
+	case 0x64:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_X : KillerbyteGameEngine::Keyboard::KEY_X;
+	case 0x65:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_Y : KillerbyteGameEngine::Keyboard::KEY_Y;
+	case 0x66:
+		return shiftKeyDown ? KillerbyteGameEngine::Keyboard::KEY_CAP_Z : KillerbyteGameEngine::Keyboard::KEY_Z;
+	default:
+		return KillerbyteGameEngine::Keyboard::KEY_NONE;
+	}
+}
+
 // Message Handler for Win32. Essentially, all input is handled here
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
+	static KillerbyteGameEngine::Game* game = KillerbyteGameEngine::Game::GetInstance();
+
+	// If the game is not running then we won't handle those messages
+	if (!game->GetState() != KillerbyteGameEngine::Game::UNINITIALIZED)
+	{
+		return DefWindowProc(hwnd, msg, wParam, lParam);
+	}
+
+	static bool shiftDown = false;
+	static bool capsOn = false;
+
 	switch (msg)
 	{
-	case WM_CLOSE:
-		DestroyWindow(hwnd);
-		PostQuitMessage(0);
-		return 0;
+		case WM_CLOSE:
+			DestroyWindow(hwnd);
+			PostQuitMessage(0);
+			return 0;
 
-	default:
-		return DefWindowProc(hwnd, msg, wParam, lParam);
+		case WM_KEYDOWN:
+			if (wParam == VK_SHIFT || wParam == VK_LSHIFT || wParam == VK_RSHIFT)
+			{
+				shiftDown = true;
+			}
+
+			if (wParam == VK_CAPITAL)
+			{
+				capsOn = !capsOn;
+			}
+
+			// There are no key repeats
+			//if ((lParam & 0x40000000) == 0)
+			//{
+			//	KillerbyteGameEngine::Platform::KeyEvent(KillerbyteGameEngine::Keyboard::KEY_DOWN, getKey(wParam, shiftDown ^ capsOn));
+			//}
+
+			KillerbyteGameEngine::Platform::KeyEvent(KillerbyteGameEngine::Keyboard::KEY_DOWN, getKey(wParam, shiftDown ^ capsOn));
+
+			break;
+
+		case WM_KEYUP:
+			if (wParam == VK_SHIFT || wParam == VK_LSHIFT || wParam == VK_RSHIFT)
+			{
+				shiftDown = true;
+			}
+
+			KillerbyteGameEngine::Platform::KeyEvent(KillerbyteGameEngine::Keyboard::KEY_UP, getKey(wParam, shiftDown & capsOn));
+
+			break;
+
+		case WM_CHAR:
+			// There are no key repeats
+			if ((lParam & 0x40000000) == 0)
+			{
+				KillerbyteGameEngine::Platform::KeyEvent(KillerbyteGameEngine::Keyboard::KEY_DOWN, wParam);
+			}
+
+			break;
+
+		case WM_UNICHAR:
+			// There are no key repeats
+			if ((lParam & 0x40000000) == 0)
+			{
+				KillerbyteGameEngine::Platform::KeyEvent(KillerbyteGameEngine::Keyboard::KEY_DOWN, wParam);
+			}
+
+			break;
+
+		case WM_SIZE:
+			KillerbyteGameEngine::Platform::ResizeEvent((unsigned int)(short)LOWORD(lParam), (unsigned int)(short)HIWORD(lParam));
+			break;
+
+		default:
+			return DefWindowProc(hwnd, msg, wParam, lParam);
 	}
 }
 

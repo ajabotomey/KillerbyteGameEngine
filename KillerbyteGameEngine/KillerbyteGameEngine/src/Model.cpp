@@ -29,12 +29,7 @@ namespace KillerbyteGameEngine
 
 	void Model::Update(float elapsedTime)
 	{
-		Vector3 newPosition = position;
-		newPosition.setX(newPosition.getX() + 0.001);
-
-		modelMatrix.translation(newPosition);
-
-		position = newPosition;
+		modelMatrix.translation(position);
 	}
 
 	void Model::Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle)

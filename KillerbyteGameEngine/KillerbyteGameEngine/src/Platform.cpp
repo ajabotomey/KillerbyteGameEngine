@@ -22,4 +22,9 @@ namespace KillerbyteGameEngine
 
 		glViewport(0, 0, width, height);
 	}
+
+	void Platform::KeyEvent(Keyboard::KeyEvent evt, int key)
+	{
+		Game::GetInstance()->KeyEvent(evt, key);
+	}
 }

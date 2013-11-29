@@ -11,13 +11,13 @@ public:
 	TestTriangle();
 
 	// Have various input events here
-
+	void KeyEvent(Keyboard::KeyEvent evt, int key);
 protected:
 	void Initialize();
 	void Finalize();
 	void Update(float elapsedTime);
 	void Render(float elapsedTime);
-
+	
 private: // Methods
 	GLuint LoadShader(GLenum type, const char* source);
 	void InitRectangle(); // These will eventually be in its own object but for now, we use these to demo 

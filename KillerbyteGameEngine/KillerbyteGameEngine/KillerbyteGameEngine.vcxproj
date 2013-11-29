@@ -79,6 +79,7 @@
     <ClInclude Include="src\Base.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Keyboard.h" />
     <ClInclude Include="src\KillerbyteGameEngine.h" />
     <ClInclude Include="src\LogManager.h" />
     <ClInclude Include="src\Matrix44.h" />

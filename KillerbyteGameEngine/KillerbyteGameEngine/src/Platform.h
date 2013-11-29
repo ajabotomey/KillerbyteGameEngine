@@ -1,6 +1,8 @@
 #ifndef PLATFORM_H_
 #define PLATFORM_H_
 
+#include "Keyboard.h"
+
 namespace KillerbyteGameEngine
 {
 	class Game;
@@ -28,6 +30,7 @@ namespace KillerbyteGameEngine
 		Platform(Game* game);
 		
 		static void ResizeEvent(unsigned int width, unsigned int height);
+		static void KeyEvent(Keyboard::KeyEvent evt, int key);
 	private:
 		Game* gameInstance;
 	};
