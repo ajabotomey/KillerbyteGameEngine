@@ -169,14 +169,15 @@ obj/local/armeabi/objs-debug/TestTriangle/TestTriangle.o: \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
  ../../KillerbyteGameEngine/src/Game.h \
- ../../KillerbyteGameEngine/src/Platform.h \
+ ../../KillerbyteGameEngine/src/Camera.h \
+ ../../KillerbyteGameEngine/src/Object.h \
  ../../KillerbyteGameEngine/src/Vector2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
  ../../KillerbyteGameEngine/src/Vector3.h \
  ../../KillerbyteGameEngine/src/Matrix44.h \
- ../../KillerbyteGameEngine/src/Camera.h \
- ../../KillerbyteGameEngine/src/Object.h \
- ../../KillerbyteGameEngine/src/Shader.h
+ ../../KillerbyteGameEngine/src/Platform.h \
+ ../../KillerbyteGameEngine/src/Shader.h \
+ ../../KillerbyteGameEngine/src/Model.h
 
 jni/../..//TestTriangle.h:
 
@@ -518,7 +519,9 @@ jni/../..//TestTriangle.h:
 
 ../../KillerbyteGameEngine/src/Game.h:
 
-../../KillerbyteGameEngine/src/Platform.h:
+../../KillerbyteGameEngine/src/Camera.h:
+
+../../KillerbyteGameEngine/src/Object.h:
 
 ../../KillerbyteGameEngine/src/Vector2.h:
 
@@ -528,8 +531,8 @@ jni/../..//TestTriangle.h:
 
 ../../KillerbyteGameEngine/src/Matrix44.h:
 
-../../KillerbyteGameEngine/src/Camera.h:
-
-../../KillerbyteGameEngine/src/Object.h:
+../../KillerbyteGameEngine/src/Platform.h:
 
 ../../KillerbyteGameEngine/src/Shader.h:
+
+../../KillerbyteGameEngine/src/Model.h:

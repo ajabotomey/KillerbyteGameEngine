@@ -6,6 +6,7 @@ LOCAL_SRC_FILES := \
     Camera.cpp \
     Game.cpp \
     Matrix44.cpp \
+    Model.cpp \
     Platform.cpp \
     PlatformAndroid.cpp \
     Shader.cpp 

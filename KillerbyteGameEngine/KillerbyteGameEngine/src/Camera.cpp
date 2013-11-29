@@ -4,10 +4,6 @@ namespace KillerbyteGameEngine
 {
 	Camera::Camera()
 	{
-		//direction.set(0.0f, -2.0f, -5.0f);
-		direction.set(0.0f, 0.0f, -1.0f);
-		//position.set(0.0f, 2.0f, 5.0f);
-		position.set(0.0f, 0.0f, 5.0f);
 		movementSpeed = 0.1f;
 	}
 
@@ -16,9 +12,12 @@ namespace KillerbyteGameEngine
 
 	}
 
-	void Camera::LookAt(Vector3 camera, Vector3 target, Vector3 up)
+	Matrix44 Camera::LookAt(Vector3 camera, Vector3 target, Vector3 up)
 	{
 		Matrix44 modelView, rotation, translation;
+		
+		position = camera; // Where the camera is positioned
+		direction = target; // Where the camera is facing
 
 		Vector3 forward = target - camera;
 		forward.normalize();
@@ -45,9 +44,11 @@ namespace KillerbyteGameEngine
 		modelView = rotation * translation;
 
 		viewMatrix = modelView;
+
+		return viewMatrix;
 	}
 
-	void Camera::Frustum(double left, double right, double bottom, double top, double nearPlane, double farPlane)
+	Matrix44 Camera::Frustum(double left, double right, double bottom, double top, double nearPlane, double farPlane)
 	{
 		double A, B, C, D, E, F;
 
@@ -58,17 +59,19 @@ namespace KillerbyteGameEngine
 		E = (right + left) / (right - left);
 		F = (top + bottom) / (top - bottom);
 
-		perspectiveMatrix(0, 0) = A;
-		perspectiveMatrix(1, 1) = B;
-		perspectiveMatrix(2, 2) = C;
-		perspectiveMatrix(2, 3) = D;
-		perspectiveMatrix(0, 2) = E;
-		perspectiveMatrix(1, 2) = F;
-		perspectiveMatrix(3, 2) = -1;
-		perspectiveMatrix(3, 3) = 0;
+		projectionMatrix(0, 0) = A;
+		projectionMatrix(1, 1) = B;
+		projectionMatrix(2, 2) = C;
+		projectionMatrix(2, 3) = D;
+		projectionMatrix(0, 2) = E;
+		projectionMatrix(1, 2) = F;
+		projectionMatrix(3, 2) = -1;
+		projectionMatrix(3, 3) = 0;
+
+		return projectionMatrix;
 	}
 
-	void Camera::Perspective(float fovy, float aspectRatio, float nearPlane, float farPlane)
+	Matrix44 Camera::Perspective(float fovy, float aspectRatio, float nearPlane, float farPlane)
 	{
 		float top = nearPlane * (tan((fovy * PI) / 360));
 		float right = top * aspectRatio;
@@ -80,12 +83,39 @@ namespace KillerbyteGameEngine
 		float C = -((farPlane + nearPlane) / (farPlane - nearPlane));
 		float D = -2 * ((farPlane * nearPlane) / (farPlane - nearPlane));
 
-		perspectiveMatrix(0, 0) = A;
-		perspectiveMatrix(1, 1) = B;
-		perspectiveMatrix(2, 2) = C;
-		perspectiveMatrix(2, 3) = D;
-		perspectiveMatrix(3, 2) = -1;
-		perspectiveMatrix(3, 3) = 0;
+		projectionMatrix(0, 0) = A;
+		projectionMatrix(1, 1) = B;
+		projectionMatrix(2, 2) = C;
+		projectionMatrix(2, 3) = D;
+		projectionMatrix(3, 2) = -1;
+		projectionMatrix(3, 3) = 0;
+
+		return projectionMatrix;
+	}
+
+	Matrix44 Camera::Ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
+	{
+		float deltaX = right - left;
+		float deltaY = top - bottom;
+		float deltaZ = farPlane - nearPlane;
+		Matrix44 ortho;
+
+		if (deltaX == 0.0f || deltaY == 0.0f || deltaZ == 0.0f)
+		{
+			//return ortho;
+		}
+
+		ortho(0, 0) = 2.0f / deltaX;
+		ortho(3, 0) = -(right + left) / deltaX;
+		ortho(1, 1) = 2.0f / deltaY;
+		ortho(3, 1) = -(top + bottom) / deltaY;
+		ortho(2, 2) = 2.0f / deltaZ;
+		ortho(3, 2) = -(nearPlane + farPlane) / deltaZ;
+
+		//return ortho;
+		projectionMatrix = ortho;
+
+		return projectionMatrix;
 	}
 
 	void Camera::MoveCamera(float x, float y, float z)

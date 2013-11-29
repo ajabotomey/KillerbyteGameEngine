@@ -166,7 +166,10 @@ obj/local/armeabi/objs/Killerbyte/PlatformAndroid.o: \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
- jni/../../src/Platform.h jni/../../src/Game.h \
+ jni/../../src/Platform.h jni/../../src/Game.h jni/../../src/Camera.h \
+ jni/../../src/Object.h jni/../../src/Vector2.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
+ jni/../../src/Vector3.h jni/../../src/Matrix44.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/android/native_app_glue/android_native_app_glue.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/poll.h \
@@ -517,6 +520,18 @@ jni/../../src/Base.h:
 jni/../../src/Platform.h:
 
 jni/../../src/Game.h:
+
+jni/../../src/Camera.h:
+
+jni/../../src/Object.h:
+
+jni/../../src/Vector2.h:
+
+/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath:
+
+jni/../../src/Vector3.h:
+
+jni/../../src/Matrix44.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h:
 

@@ -25,6 +25,7 @@ private: // Methods
 private: // Variables
 	GLuint program;
 	Matrix44 projMatrix;
+	Matrix44 viewMatrix;
 	Matrix44 mvMatrix;
 	Matrix44 mvpMatrix;
 	GLint mvpMatrixHandle;

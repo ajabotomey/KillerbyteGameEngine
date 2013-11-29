@@ -127,7 +127,7 @@ namespace KillerbyteGameEngine
 	}
 	
 	void ShutdownEGLMain()
-	{
+	{	
 		ShutdownEGLSurface();
 
 		if (context != EGL_NO_CONTEXT)

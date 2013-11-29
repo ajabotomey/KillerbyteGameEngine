@@ -1,5 +1,5 @@
 CC= g++
-utilObjs = MainLinux.o Platform.o PlatformLinux.o Game.o Camera.o Matrix44.o
+utilObjs = MainLinux.o Platform.o PlatformLinux.o Game.o Camera.o Matrix44.o Shader.o Model.o
 INCDIR = /usr/include/GL
 CFLAGS= -c -Wall -I$(INCDIR) -I"glew/include"
 
@@ -24,6 +24,12 @@ Camera.o: src/Camera.cpp
 			
 Matrix44.o: src/Matrix44.cpp
 			$(CC) $(CFLAGS) src/Matrix44.cpp
+			
+Shader.o: src/Shader.cpp
+			$(CC) $(CFLAGS) src/Shader.cpp
+			
+Model.o: src/Model.cpp
+			$(CC) $(CFLAGS) src/Model.cpp
 			
 clean: 
 			rm -f *.o; rm libKillerbyte.a

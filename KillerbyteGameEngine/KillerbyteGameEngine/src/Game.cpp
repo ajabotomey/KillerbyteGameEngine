@@ -10,11 +10,12 @@ namespace KillerbyteGameEngine
 	{
 		initialized = false;
 		instance = this;
+		camera = new Camera();
 	}
 
 	Game::~Game()
 	{
-		// Shutdown the game
+		
 	}
 
 	Game* Game::GetInstance()

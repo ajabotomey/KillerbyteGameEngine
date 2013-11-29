@@ -29,10 +29,27 @@ namespace KillerbyteGameEngine
 		void Update(float elapsedTime);
 		// This will eventually go back to only one parameter
 		// Shader will eventually become a member of Model
-		void Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle); 
+		void Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle);
+		void Shutdown();
+
+		// Accessors
+		inline Matrix44 GetModelMatrix() { return modelMatrix; }
+
+		// Mutators
+		void SetPosition(Vector3 newPosition);
 	private:
 		std::vector<GLfloat> vertices;
 		std::vector<GLubyte> indices;
+
+		// Influences the model matrix
+		Vector3 position;
+		Vector3 rotation;
+		Vector3 scale;
+
+		// Matrices - No need for the view matrix because we can get that from the camera
+		Matrix44 mvpMatrix;
+		Matrix44 modelMatrix;
+		Matrix44 projMatrix;
 
 		GLuint info[2]; // Buffer data
 	};

@@ -29,7 +29,10 @@ namespace KillerbyteGameEngine
 
 	void Model::Update(float elapsedTime)
 	{
+		Vector3 newPosition = position;
+		newPosition.setX(newPosition.getX() + 0.1);
 
+		modelMatrix.translation(newPosition);
 	}
 
 	void Model::Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle)
@@ -39,6 +42,19 @@ namespace KillerbyteGameEngine
 
 		glUniformMatrix4fv(handle, 1, GL_FALSE, (GLfloat*)&mvpMatrix(0, 0));
 		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_BYTE, 0);
+	}
+
+	void Model::Shutdown()
+	{
+		glDisableVertexAttribArray(0);
+
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	}
+
+	void Model::SetPosition(Vector3 newPosition)
+	{
+		position = newPosition;
 	}
 
 	void Model::LoadVertices(GLfloat* data, int length)

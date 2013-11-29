@@ -1,6 +1,8 @@
 #ifndef GAME_H_
 #define GAME_H_
 
+#include "Camera.h"
+
 namespace KillerbyteGameEngine
 {
 	class Game
@@ -32,6 +34,8 @@ namespace KillerbyteGameEngine
 		virtual void Finalize() = 0;
 		virtual void Update(float elapsedTime) = 0;
 		virtual void Render(float elapsedTime) = 0;
+
+		Camera* camera;
 	private: 
 		bool Startup();
 		void Shutdown();

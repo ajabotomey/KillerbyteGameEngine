@@ -180,14 +180,15 @@ obj/local/armeabi/objs-debug/TestTriangle/__/KillerbyteGameEngine/src/MainAndroi
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
  jni/../..//../KillerbyteGameEngine/src/Game.h \
- jni/../..//../KillerbyteGameEngine/src/Platform.h \
+ jni/../..//../KillerbyteGameEngine/src/Camera.h \
+ jni/../..//../KillerbyteGameEngine/src/Object.h \
  jni/../..//../KillerbyteGameEngine/src/Vector2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
  jni/../..//../KillerbyteGameEngine/src/Vector3.h \
  jni/../..//../KillerbyteGameEngine/src/Matrix44.h \
- jni/../..//../KillerbyteGameEngine/src/Camera.h \
- jni/../..//../KillerbyteGameEngine/src/Object.h \
- jni/../..//../KillerbyteGameEngine/src/Shader.h
+ jni/../..//../KillerbyteGameEngine/src/Platform.h \
+ jni/../..//../KillerbyteGameEngine/src/Shader.h \
+ jni/../..//../KillerbyteGameEngine/src/Model.h
 
 /cygdrive/c/android-ndt/android-ndk-r9b/sources/android/native_app_glue/android_native_app_glue.h:
 
@@ -549,7 +550,9 @@ jni/../..//../KillerbyteGameEngine/src/Base.h:
 
 jni/../..//../KillerbyteGameEngine/src/Game.h:
 
-jni/../..//../KillerbyteGameEngine/src/Platform.h:
+jni/../..//../KillerbyteGameEngine/src/Camera.h:
+
+jni/../..//../KillerbyteGameEngine/src/Object.h:
 
 jni/../..//../KillerbyteGameEngine/src/Vector2.h:
 
@@ -559,8 +562,8 @@ jni/../..//../KillerbyteGameEngine/src/Vector3.h:
 
 jni/../..//../KillerbyteGameEngine/src/Matrix44.h:
 
-jni/../..//../KillerbyteGameEngine/src/Camera.h:
-
-jni/../..//../KillerbyteGameEngine/src/Object.h:
+jni/../..//../KillerbyteGameEngine/src/Platform.h:
 
 jni/../..//../KillerbyteGameEngine/src/Shader.h:
+
+jni/../..//../KillerbyteGameEngine/src/Model.h:

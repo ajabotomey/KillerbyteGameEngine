@@ -18,7 +18,7 @@ GLubyte vIndices[] =
 
 TestTriangle::TestTriangle()
 {
-
+	
 }
 
 void TestTriangle::Initialize()
@@ -28,16 +28,18 @@ void TestTriangle::Initialize()
 
 void TestTriangle::Finalize()
 {
-
+	rectangle.Shutdown();
 }
 
 void TestTriangle::Update(float elapsedTime)
 {
 	// Possibly change some of these values to allow for greater range for view matrix
-	projMatrix = projMatrix.Ortho(-2.0f, 2.0f, -2.5f, 2.5f, -1.0f, 1.0f);
+	projMatrix = camera->Ortho(-2.0f, 2.0f, -2.5f, 2.5f, -1.0f, 1.0f);
 
 	// Create the view matrix
-	mvMatrix = mvMatrix.LookAt(Vector3(0.0, 0.0, 1.0), Vector3(0.0, 0.0, 0.0), Vector3(0.0, 1.0, 0.0));
+	viewMatrix = camera->LookAt(Vector3(0.0, 0.0, 1.0), Vector3(0.0, 0.0, 0.0), Vector3(0.0, 1.0, 0.0));
+
+	mvMatrix = rectangle.GetModelMatrix() * viewMatrix;
 
 	mvpMatrix = mvMatrix * projMatrix;
 }

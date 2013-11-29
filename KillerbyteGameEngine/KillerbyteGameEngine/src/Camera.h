@@ -22,13 +22,16 @@ namespace KillerbyteGameEngine
 		~Camera();
 
 		// Main Methods
-		void LookAt(Vector3 camera, Vector3 target, Vector3 up);
+		Matrix44 LookAt(Vector3 camera, Vector3 target, Vector3 up);
 		void MoveCamera(float x, float y, float z);
-		void Frustum(double left, double right, double bottom, double top, double nearPlane, double farPlane);
-		void Perspective(float fovy, float aspectRatio, float nearPlane, float farPlane);
+		Matrix44 Frustum(double left, double right, double bottom, double top, double nearPlane, double farPlane);
+		Matrix44 Perspective(float fovy, float aspectRatio, float nearPlane, float farPlane);
+		Matrix44 Ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane);
 
 		// Assessors
 		inline float GetSpeed() { return movementSpeed; }
+		inline Matrix44 GetViewMatrix() { return viewMatrix; }
+		inline Matrix44 GetProjectionMatrix() { return projectionMatrix; }
 
 		// Properties
 		Vector3 position;
@@ -41,7 +44,7 @@ namespace KillerbyteGameEngine
 		
 
 	private:
-		Matrix44 perspectiveMatrix;
+		Matrix44 projectionMatrix;
 		Matrix44 viewMatrix;
 	};
 }
