@@ -39,4 +39,11 @@
 template <typename T, unsigned S>
 inline unsigned arraysize(const T(&v)[S]) { return S; }
 
+// Android Logging function
+#ifdef __ANDROID__
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "KillerbyteGameEngine", __VA_ARGS__))
+#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "KillerbyteGameEngine", __VA_ARGS__))
+#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "KillerbyteGameEngine", __VA_ARGS__))
+#endif
+
 #endif

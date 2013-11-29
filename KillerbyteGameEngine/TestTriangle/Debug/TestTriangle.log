@@ -1,4 +1,4 @@
-﻿Build started 29/11/2013 1:17:20 PM.
+﻿Build started 29/11/2013 2:37:41 PM.
      1>Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TestTriangle.cpp
@@ -8,6 +8,7 @@
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Debug\TestTriangle.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../KillerbyteGameEngine/src/glew/lib/windows/x86 OpenGL32.lib GlU32.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Debug\TestTriangle.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Debug\TestTriangle.lib" /MACHINE:X86 Debug\TestTriangle.obj
          C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Debug\Camera.obj
          C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Debug\Game.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Debug\LogManager.obj
          C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Debug\MainWin32.obj
          C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Debug\Matrix44.obj
          C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Debug\Model.obj
@@ -21,4 +22,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.24
+Time Elapsed 00:00:01.29

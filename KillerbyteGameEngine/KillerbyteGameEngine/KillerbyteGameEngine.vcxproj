@@ -80,6 +80,7 @@
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\KillerbyteGameEngine.h" />
+    <ClInclude Include="src\LogManager.h" />
     <ClInclude Include="src\Matrix44.h" />
     <ClInclude Include="src\Model.h" />
     <ClInclude Include="src\Object.h" />
@@ -93,6 +94,7 @@
   <ItemGroup>
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\LogManager.cpp" />
     <ClCompile Include="src\MainWin32.cpp" />
     <ClCompile Include="src\Matrix44.cpp" />
     <ClCompile Include="src\Model.cpp" />
