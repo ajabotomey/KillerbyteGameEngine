@@ -7,10 +7,6 @@
 #include <android/log.h>
 #include <android_native_app_glue.h>
 
-#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "KillerbyteGameEngine", __VA_ARGS__))
-#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "KillerbyteGameEngine", __VA_ARGS__))
-#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "KillerbyteGameEngine", __VA_ARGS__))
-
 struct android_app* app;
 
 EGLDisplay display = EGL_NO_DISPLAY;

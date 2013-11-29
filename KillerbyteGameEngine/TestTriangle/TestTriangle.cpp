@@ -33,6 +33,9 @@ void TestTriangle::Finalize()
 
 void TestTriangle::Update(float elapsedTime)
 {
+	// First update the ractangle
+	rectangle.Update(elapsedTime);
+
 	// Possibly change some of these values to allow for greater range for view matrix
 	projMatrix = camera->Ortho(-2.0f, 2.0f, -2.5f, 2.5f, -1.0f, 1.0f);
 

@@ -5,6 +5,7 @@ LOCAL_MODULE := libKillerbyte
 LOCAL_SRC_FILES := \
     Camera.cpp \
     Game.cpp \
+    LogManager.cpp \
     Matrix44.cpp \
     Model.cpp \
     Platform.cpp \
