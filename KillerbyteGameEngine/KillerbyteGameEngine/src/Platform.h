@@ -2,10 +2,12 @@
 #define PLATFORM_H_
 
 #include "Keyboard.h"
+#include "FileSystem.h"
 
 namespace KillerbyteGameEngine
 {
 	class Game;
+	class FileSystem;
   
 	class Platform
 	{
@@ -19,6 +21,7 @@ namespace KillerbyteGameEngine
 		
 		void Run();
 		void Shutdown();
+
 	private:
 		static unsigned int getDisplayWidth();
 		static unsigned int getDisplayHeight();

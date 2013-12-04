@@ -2,7 +2,8 @@
 
 #include "Base.h"
 #include "Platform.h"
-#include "glew/include/wglew.h"
+#include "LogManager.h"
+#include "wglew.h"
 
 // All Win32 code goes here
 
@@ -220,6 +221,8 @@ namespace KillerbyteGameEngine
 
 	void Platform::Initialize(Game* game)
 	{
+		FileSystem::GetInstance()->SetResourcePath("./");
+
 		//Struct to describe the main window.
 		WNDCLASSEX windowClass;
 
@@ -259,9 +262,9 @@ namespace KillerbyteGameEngine
 		//If now window was created
 		if (!hwnd)
 		{
+			LogManager::GetInstance()->WriteLog("Window Creation Error!");
 			MessageBox(NULL, "Window Creation Error.", "ERROR", MB_OK | MB_ICONEXCLAMATION);
 			return;
-			// Log the error
 		}
 
 		//Get the window's device context

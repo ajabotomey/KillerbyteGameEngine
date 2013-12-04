@@ -15,4 +15,6 @@ void android_main(struct android_app* state)
 
 	platform.Run();
 	platform.Shutdown();
+	
+	exit(0);
 }

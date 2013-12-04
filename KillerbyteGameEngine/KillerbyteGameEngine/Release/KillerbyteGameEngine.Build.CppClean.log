@@ -1,9 +1,19 @@
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\vc120.pdb
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\mainwin32.obj
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\platform.obj
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\matrix44.obj
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\game.obj
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\camera.obj
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\cl.command.1.tlog
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\cl.read.1.tlog
-c:\users\aj\desktop\game development\killerbyte game engine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\cl.write.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\vc120.pdb
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\shader.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\platformwin32.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\platform.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\model.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\matrix44.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\mainwin32.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\logmanager.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\game.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\filesystem.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\file.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\camera.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\release\killerbytegameengine.lib
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\cl.command.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\cl.read.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\cl.write.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\lib-link.read.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\lib-link.write.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\release\killerby.d2c44653.tlog\lib.command.1.tlog

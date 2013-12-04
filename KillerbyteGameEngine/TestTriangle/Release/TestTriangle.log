@@ -1,13 +1,36 @@
-﻿Build started 10/11/2013 10:09:56 AM.
-     1>Project "C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\Release\TestTriangle.exe" /INCREMENTAL:NO /NOLOGO OpenGL32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\Release\TestTriangle.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\Release\TestTriangle.lib" /MACHINE:X86 /SAFESEH Release\TestTriangle.obj
-         "C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\Release\KillerbyteGameEngine.lib"
+﻿Build started 4/12/2013 3:52:59 PM.
+     1>Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\glew\include" /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\libpng\include" /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\zlib\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TestTriangle.cpp
+         TestTriangle.cpp
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+     1>TestTriangle.cpp(40): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
+     1>TestTriangle.cpp(41): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
+     1>TestTriangle.cpp(107): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>TestTriangle.cpp(114): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>TestTriangle.cpp(126): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>TestTriangle.cpp(133): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Release\TestTriangle.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\glew\lib\windows" /LIBPATH:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\glew\include" /LIBPATH:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\libpng\lib\windows" /LIBPATH:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\zlib\lib\windows" OpenGL32.lib GlU32.lib glew32.lib libpng14.lib zlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Release\TestTriangle.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Release\TestTriangle.lib" /MACHINE:X86 /SAFESEH Release\TestTriangle.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\Camera.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\File.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\FileSystem.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\Game.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\LogManager.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\MainWin32.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\Matrix44.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\Model.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\Platform.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\PlatformWin32.obj
+         C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\Release\Shader.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
          Generating code
          Finished generating code
-         TestTriangle.vcxproj -> C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\Release\TestTriangle.exe
-     1>Done Building Project "C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" (Build target(s)).
+     1>MSVCRT.lib(ti_inst.obj) : error LNK2005: "private: __thiscall type_info::type_info(class type_info const &)" (??0type_info@@AAE@ABV0@@Z) already defined in LIBCMT.lib(typinfo.obj)
+     1>MSVCRT.lib(ti_inst.obj) : error LNK2005: "private: class type_info & __thiscall type_info::operator=(class type_info const &)" (??4type_info@@AAEAAV0@ABV0@@Z) already defined in LIBCMT.lib(typinfo.obj)
+     1>C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Release\TestTriangle.exe : fatal error LNK1169: one or more multiply defined symbols found
+     1>Done Building Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.40
+Time Elapsed 00:00:01.79

@@ -4,6 +4,8 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libKillerbyte
 LOCAL_SRC_FILES := \
     Camera.cpp \
+    File.cpp \
+    FileSystem.cpp \
     Game.cpp \
     LogManager.cpp \
     Matrix44.cpp \

@@ -6,10 +6,14 @@
 // TODO: Add Support for iOS, Mac OSX and Android
 
 // C++ Includes
+#include <cstdlib>
 #include <string>
 #include <vector>
 #include <fstream>
 #include <sstream>
+
+// Image Loading
+//#include <png.h>
 
 // Graphics Includes
 #ifdef __ANDROID__
@@ -23,7 +27,7 @@
 #define WIN32_LEAN_AND_MEAN
 #define GLEW_STATIC
 #include <Windows.h>
-#include "glew/include/glew.h"
+#include <glew.h>
 #endif
 
 #ifndef NULL
@@ -38,12 +42,5 @@
 // A nice function for checking array size
 template <typename T, unsigned S>
 inline unsigned arraysize(const T(&v)[S]) { return S; }
-
-// Android Logging function
-#ifdef __ANDROID__
-#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "KillerbyteGameEngine", __VA_ARGS__))
-#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "KillerbyteGameEngine", __VA_ARGS__))
-#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "KillerbyteGameEngine", __VA_ARGS__))
-#endif
 
 #endif

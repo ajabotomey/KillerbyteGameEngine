@@ -4,10 +4,10 @@ TestTriangle game;
 
 GLfloat vVertices[] =
 {
-	0.5f,  -1.0f, 0.0f,
-	0.5f, 1.0f, 0.0f,
-	-0.5f, 1.0f, 0.0f,
-	-0.5f, -1.0f, 0.0f
+	50.0f,  -100.0f, 0.0f,
+	50.0f, 100.0f, 0.0f,
+	-50.0f, 100.0f, 0.0f,
+	-50.0f, -100.0f, 0.0f
 };
 
 GLubyte vIndices[] =
@@ -36,8 +36,12 @@ void TestTriangle::Update(float elapsedTime)
 	// First update the ractangle
 	rectangle.Update(elapsedTime);
 
+	// We need the half extents of the screen
+	float halfWidth = GetWidth() / 2;
+	float halfHeight = GetHeight() / 2;
+
 	// Possibly change some of these values to allow for greater range for view matrix
-	projMatrix = camera->Ortho(-2.0f, 2.0f, -2.5f, 2.5f, -1.0f, 1.0f);
+	projMatrix = camera->Ortho(-halfWidth, halfWidth, -halfHeight , halfHeight, -1.0f, 1.0f);
 
 	// Create the view matrix
 	viewMatrix = camera->LookAt(Vector3(0.0, 0.0, 1.0), Vector3(0.0, 0.0, 0.0), Vector3(0.0, 1.0, 0.0));

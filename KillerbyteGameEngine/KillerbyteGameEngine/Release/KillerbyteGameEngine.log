@@ -1,20 +1,65 @@
-﻿Build started 10/11/2013 10:09:53 AM.
-     1>Project "C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/12/2013 3:52:53 PM.
+     1>Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\glew\include" /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\libpng\include" /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\zlib\include" /Zi /nologo /W4 /WX- /sdl /O2 /Oi /Oy- /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\Camera.cpp src\File.cpp src\FileSystem.cpp src\Game.cpp src\LogManager.cpp src\MainWin32.cpp src\Matrix44.cpp src\Model.cpp src\Platform.cpp src\PlatformWin32.cpp src\Shader.cpp
+         Camera.cpp
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Camera.cpp(62): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Camera.cpp(63): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Camera.cpp(64): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Camera.cpp(65): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Camera.cpp(66): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Camera.cpp(67): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Camera.cpp(76): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         File.cpp
+         FileSystem.cpp
          Game.cpp
-     1>Game.cpp(49): warning C4244: 'argument' : conversion from 'double' to 'GLint', possible loss of data
-     1>Game.cpp(88): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Game.cpp(90): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>src\Game.cpp(132): warning C4100: 'key' : unreferenced formal parameter
+     1>src\Game.cpp(132): warning C4100: 'evt' : unreferenced formal parameter
+         LogManager.cpp
+         MainWin32.cpp
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+     1>src\MainWin32.cpp(11): warning C4100: 'cmdShow' : unreferenced formal parameter
+     1>src\MainWin32.cpp(11): warning C4100: 'hInstance' : unreferenced formal parameter
+         Matrix44.cpp
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Matrix44.cpp(178): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>src\Matrix44.cpp(210): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Matrix44.cpp(211): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Matrix44.cpp(212): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Matrix44.cpp(213): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Matrix44.cpp(214): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Matrix44.cpp(215): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Model.cpp
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+     1>src\Model.cpp(30): warning C4100: 'elapsedTime' : unreferenced formal parameter
+     1>src\Model.cpp(35): warning C4100: 'elapsedTime' : unreferenced formal parameter
+         Platform.cpp
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+         PlatformWin32.cpp
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\Vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+     1>src\PlatformWin32.cpp(222): warning C4100: 'game' : unreferenced formal parameter
+         Shader.cpp
+         Generating Code...
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\platformwin32.cpp(178): warning C4715: 'WndProc' : not all control paths return a value
+     1>c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\platformwin32.cpp(271): warning C4706: assignment within conditional expression
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\Release\KillerbyteGameEngine.lib" /NOLOGO Release\Camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Release\KillerbyteGameEngine.lib" /NOLOGO Release\Camera.obj
+         Release\File.obj
+         Release\FileSystem.obj
          Release\Game.obj
+         Release\LogManager.obj
+         Release\MainWin32.obj
          Release\Matrix44.obj
+         Release\Model.obj
          Release\Platform.obj
          Release\PlatformWin32.obj
-         Release\MainWin32.obj
-         KillerbyteGameEngine.vcxproj -> C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\Release\KillerbyteGameEngine.lib
-     1>Done Building Project "C:\Users\AJ\Desktop\Game Development\Killerbyte Game Engine\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine.vcxproj" (Build target(s)).
+         Release\Shader.obj
+         KillerbyteGameEngine.vcxproj -> C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Release\KillerbyteGameEngine.lib
+     1>Done Building Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine\KillerbyteGameEngine.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.80
+Time Elapsed 00:00:05.77
