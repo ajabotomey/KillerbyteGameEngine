@@ -174,6 +174,8 @@ obj/local/armeabi/objs-debug/TestTriangle/__/KillerbyteGameEngine/src/MainAndroi
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/sstream \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c \
+ ../../external-deps/OpenAL/include/AL/al.h \
+ ../../external-deps/OpenAL/include/AL/alc.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/eglplatform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h \
@@ -190,6 +192,7 @@ obj/local/armeabi/objs-debug/TestTriangle/__/KillerbyteGameEngine/src/MainAndroi
  jni/../..//../KillerbyteGameEngine/src/Keyboard.h \
  jni/../..//../KillerbyteGameEngine/src/Platform.h \
  jni/../..//../KillerbyteGameEngine/src/FileSystem.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
  jni/../..//../KillerbyteGameEngine/src/Shader.h \
  jni/../..//../KillerbyteGameEngine/src/Model.h
 
@@ -541,6 +544,10 @@ jni/../..//../KillerbyteGameEngine/src/Base.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c:
 
+../../external-deps/OpenAL/include/AL/al.h:
+
+../../external-deps/OpenAL/include/AL/alc.h:
+
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/eglplatform.h:
@@ -572,6 +579,8 @@ jni/../..//../KillerbyteGameEngine/src/Keyboard.h:
 jni/../..//../KillerbyteGameEngine/src/Platform.h:
 
 jni/../..//../KillerbyteGameEngine/src/FileSystem.h:
+
+/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:
 
 jni/../..//../KillerbyteGameEngine/src/Shader.h:
 

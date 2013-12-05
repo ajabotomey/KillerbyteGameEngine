@@ -159,6 +159,8 @@ obj/local/armeabi/objs/Killerbyte/Game.o: jni/../../src/Game.cpp \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/sstream \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c \
+ ../../external-deps/OpenAL/include/AL/al.h \
+ ../../external-deps/OpenAL/include/AL/alc.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/eglplatform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h \
@@ -172,7 +174,8 @@ obj/local/armeabi/objs/Killerbyte/Game.o: jni/../../src/Game.cpp \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
  jni/../../src/Vector3.h jni/../../src/Matrix44.h \
  jni/../../src/Keyboard.h jni/../../src/Platform.h \
- jni/../../src/FileSystem.h
+ jni/../../src/FileSystem.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio
 
 jni/../../src/Base.h:
 
@@ -494,6 +497,10 @@ jni/../../src/Base.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c:
 
+../../external-deps/OpenAL/include/AL/al.h:
+
+../../external-deps/OpenAL/include/AL/alc.h:
+
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/eglplatform.h:
@@ -529,3 +536,5 @@ jni/../../src/Keyboard.h:
 jni/../../src/Platform.h:
 
 jni/../../src/FileSystem.h:
+
+/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:

@@ -24,6 +24,7 @@ TestTriangle::TestTriangle()
 void TestTriangle::Initialize()
 {
 	InitRectangle();
+	brap.LoadAudio("assets/chirp.wav");
 }
 
 void TestTriangle::Finalize()
@@ -114,6 +115,18 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 			x = rectangle.GetPosition().getX() + 0.005;
 			rectangle.SetPositionX(x);
 			break;
+
+		case Keyboard::KEY_P:
+			brap.Play();
+			break;
+
+		case Keyboard::KEY_O:
+			brap.Stop();
+			break;
+
+		case Keyboard::KEY_I:
+			brap.Pause();
+			break;
 		}
 	}
 	else if (evt == Keyboard::KEY_UP)
@@ -123,14 +136,14 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 		case Keyboard::KEY_A:
 		case Keyboard::KEY_CAP_A:
 		case Keyboard::KEY_LEFTARROW:
-			x = rectangle.GetPosition().getX() + 0.005;
+			x = rectangle.GetPosition().getX() + 0;
 			rectangle.SetPositionX(x);
 			break;
 
 		case Keyboard::KEY_D:
 		case Keyboard::KEY_CAP_D:
 		case Keyboard::KEY_RIGHTARROW:
-			x = rectangle.GetPosition().getX() - 0.005;
+			x = rectangle.GetPosition().getX() - 0;
 			rectangle.SetPositionX(x);
 			break;
 		}

@@ -14,7 +14,7 @@ LOCAL_SRC_FILES := \
     PlatformAndroid.cpp \
     Shader.cpp 
 
-LOCAL_CFLAGS := -D__ANDROID__
+LOCAL_CFLAGS := -D__ANDROID__ -I"../../external-deps/OpenAL/include"
 LOCAL_STATIC_LIBRARIES := android_native_app_glue
 
 include $(BUILD_STATIC_LIBRARY)

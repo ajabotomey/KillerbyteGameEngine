@@ -57,13 +57,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\include;$(SolutionDir)\external-deps\zlib\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\OpenAL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenGL32.lib;GlU32.lib;glew32.lib;libpng14.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\external-deps\glew\lib\windows;$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\lib\windows;$(SolutionDir)\external-deps\zlib\lib\windows;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenAL32.lib;OpenGL32.lib;GlU32.lib;glew32.lib;libpng14.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\external-deps\OpenAL\lib\Windows;$(SolutionDir)\external-deps\glew\lib\windows;$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\lib\windows;$(SolutionDir)\external-deps\zlib\lib\windows</AdditionalLibraryDirectories>
       <LinkErrorReporting>QueueForNextLogin</LinkErrorReporting>
     </Link>
   </ItemDefinitionGroup>
@@ -85,8 +85,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>OpenGL32.lib;GlU32.lib;glew32.lib;libpng14.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\external-deps\glew\lib\windows;$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\lib\windows;$(SolutionDir)\external-deps\zlib\lib\windows;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenAL32.lib;OpenGL32.lib;GlU32.lib;glew32.lib;libpng14.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\external-deps\OpenAL\lib\Windows;$(SolutionDir)\external-deps\glew\lib\windows;$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\lib\windows;$(SolutionDir)\external-deps\zlib\lib\windows</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

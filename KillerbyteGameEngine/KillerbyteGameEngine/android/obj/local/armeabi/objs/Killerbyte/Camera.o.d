@@ -159,6 +159,8 @@ obj/local/armeabi/objs/Killerbyte/Camera.o: jni/../../src/Camera.cpp \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/sstream \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c \
+ ../../external-deps/OpenAL/include/AL/al.h \
+ ../../external-deps/OpenAL/include/AL/alc.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/eglplatform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h \
@@ -492,6 +494,10 @@ jni/../../src/Base.h:
 /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c:
+
+../../external-deps/OpenAL/include/AL/al.h:
+
+../../external-deps/OpenAL/include/AL/alc.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h:
 

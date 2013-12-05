@@ -15,6 +15,12 @@
 // Image Loading
 //#include <png.h>
 
+// Audio Loading
+#if defined __ANDROID__ || defined _WIN32
+#include <AL/al.h>
+#include <AL/alc.h>
+#endif
+
 // Graphics Includes
 #ifdef __ANDROID__
 #include <EGL/egl.h>

@@ -161,6 +161,8 @@ obj/local/armeabi/objs-debug/TestTriangle/TestTriangle.o: \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/sstream \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c \
+ ../../external-deps/OpenAL/include/AL/al.h \
+ ../../external-deps/OpenAL/include/AL/alc.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/eglplatform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h \
@@ -179,6 +181,7 @@ obj/local/armeabi/objs-debug/TestTriangle/TestTriangle.o: \
  ../../KillerbyteGameEngine/src/Keyboard.h \
  ../../KillerbyteGameEngine/src/Platform.h \
  ../../KillerbyteGameEngine/src/FileSystem.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
  ../../KillerbyteGameEngine/src/Shader.h \
  ../../KillerbyteGameEngine/src/Model.h
 
@@ -506,6 +509,10 @@ jni/../..//TestTriangle.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_sstream.c:
 
+../../external-deps/OpenAL/include/AL/al.h:
+
+../../external-deps/OpenAL/include/AL/alc.h:
+
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/egl.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/EGL/eglplatform.h:
@@ -541,6 +548,8 @@ jni/../..//TestTriangle.h:
 ../../KillerbyteGameEngine/src/Platform.h:
 
 ../../KillerbyteGameEngine/src/FileSystem.h:
+
+/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:
 
 ../../KillerbyteGameEngine/src/Shader.h:
 
