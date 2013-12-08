@@ -169,6 +169,7 @@ obj/local/armeabi/objs/Killerbyte/PlatformAndroid.o: \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
  jni/../../src/Platform.h jni/../../src/Keyboard.h \
  jni/../../src/FileSystem.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
@@ -176,7 +177,7 @@ obj/local/armeabi/objs/Killerbyte/PlatformAndroid.o: \
  jni/../../src/Vector2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
  jni/../../src/Vector3.h jni/../../src/Matrix44.h \
- /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
+ jni/../../src/AudioClip.h jni/../../src/File.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/android/native_app_glue/android_native_app_glue.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/poll.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/linux/poll.h \
@@ -529,6 +530,8 @@ jni/../../src/Base.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h:
 
+/cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h:
+
 jni/../../src/Platform.h:
 
 jni/../../src/Keyboard.h:
@@ -551,7 +554,9 @@ jni/../../src/Vector3.h:
 
 jni/../../src/Matrix44.h:
 
-/cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h:
+jni/../../src/AudioClip.h:
+
+jni/../../src/File.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/sources/android/native_app_glue/android_native_app_glue.h:
 

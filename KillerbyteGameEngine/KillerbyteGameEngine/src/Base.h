@@ -11,12 +11,17 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <map>
 
 // Image Loading
 //#include <png.h>
 
 // Audio Loading
-#if defined __ANDROID__ || defined _WIN32
+#ifdef __ANDROID__
+#include <SLES/OpenSLES.h>
+#include <SLES/OpenSLES_Android.h>
+#include <SLES/OpenSLES_AndroidConfiguration.h>
+#else
 #include <AL/al.h>
 #include <AL/alc.h>
 #endif
@@ -48,5 +53,15 @@
 // A nice function for checking array size
 template <typename T, unsigned S>
 inline unsigned arraysize(const T(&v)[S]) { return S; }
+
+// Android Logging
+#ifdef __ANDROID__
+#include <android/log.h>
+
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "Killerbyte", __VA_ARGS__))
+#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "Killerbyte", __VA_ARGS__))
+#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "Killerbyte", __VA_ARGS__))
+#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, "Killerbyte", __VA_ARGS__))
+#endif
 
 #endif

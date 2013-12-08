@@ -2,6 +2,7 @@
 
 #include "Base.h"
 #include "Platform.h"
+#include "File.h"
 #include "Game.h"
 
 #include <android/log.h>
@@ -18,11 +19,6 @@ int width, height;
 struct timespec _timespec;
 double startTime, absoluteTime;
 bool initialized = false;
-
-#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "Killerbyte", __VA_ARGS__))
-#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "Killerbyte", __VA_ARGS__))
-#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "Killerbyte", __VA_ARGS__))
-#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, "Killerbyte", __VA_ARGS__))
 
 namespace KillerbyteGameEngine
 {
@@ -276,6 +272,7 @@ namespace KillerbyteGameEngine
 	
 	void Platform::Run()
 	{
+		LOGI("We are running");
 		ANativeActivity* activity = app->activity;
 		JavaVM* javaVM = app->activity->vm;
 		JNIEnv* env = NULL;
@@ -305,10 +302,12 @@ namespace KillerbyteGameEngine
 		// Now to set the file system to the directory
 		std::string assetPath(externalPath);
 		if (externalPath[strlen(externalPath)-1] != '/')
-			assetPath += "./";
+			assetPath += "/";
 			
 		// Need to figure out a way to set the resource path in the FileSystem
 		FileSystem::SetResourcePath(assetPath.c_str());
+		
+		LOGI("Resource Path: %s", FileSystem::GetResourcePath());
 		
 		// Now to release all the string data
 		env->ReleaseStringUTFChars(stringExternalPath, externalPath);

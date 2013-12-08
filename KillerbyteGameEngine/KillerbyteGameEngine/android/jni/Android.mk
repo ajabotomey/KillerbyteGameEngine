@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)/../../src
 include $(CLEAR_VARS)
 LOCAL_MODULE := libKillerbyte
 LOCAL_SRC_FILES := \
+    AudioClip.cpp \
     Camera.cpp \
     File.cpp \
     FileSystem.cpp \

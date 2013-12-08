@@ -169,13 +169,14 @@ obj/local/armeabi/objs/Killerbyte/Game.o: jni/../../src/Game.cpp \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
  jni/../../src/Game.h jni/../../src/Camera.h jni/../../src/Object.h \
  jni/../../src/Vector2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
  jni/../../src/Vector3.h jni/../../src/Matrix44.h \
- jni/../../src/Keyboard.h jni/../../src/Platform.h \
- jni/../../src/FileSystem.h \
- /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio
+ jni/../../src/Keyboard.h jni/../../src/AudioClip.h jni/../../src/File.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
+ jni/../../src/Platform.h jni/../../src/FileSystem.h
 
 jni/../../src/Base.h:
 
@@ -517,6 +518,8 @@ jni/../../src/Base.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h:
 
+/cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h:
+
 jni/../../src/Game.h:
 
 jni/../../src/Camera.h:
@@ -533,8 +536,12 @@ jni/../../src/Matrix44.h:
 
 jni/../../src/Keyboard.h:
 
+jni/../../src/AudioClip.h:
+
+jni/../../src/File.h:
+
+/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:
+
 jni/../../src/Platform.h:
 
 jni/../../src/FileSystem.h:
-
-/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:

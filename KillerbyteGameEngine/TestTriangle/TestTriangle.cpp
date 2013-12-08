@@ -24,7 +24,7 @@ TestTriangle::TestTriangle()
 void TestTriangle::Initialize()
 {
 	InitRectangle();
-	brap.LoadAudio("assets/chirp.wav");
+	GetAudioController()->LoadClip("assets/chirp.wav", true);
 }
 
 void TestTriangle::Finalize()
@@ -117,15 +117,15 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 			break;
 
 		case Keyboard::KEY_P:
-			brap.Play();
+			GetAudioController()->PlayClip("assets/chirp.wav");
 			break;
 
 		case Keyboard::KEY_O:
-			brap.Stop();
+			// Pause Sound
 			break;
 
 		case Keyboard::KEY_I:
-			brap.Pause();
+			// Stop Sound
 			break;
 		}
 	}

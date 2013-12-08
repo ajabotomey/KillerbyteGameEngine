@@ -55,6 +55,9 @@ namespace KillerbyteGameEngine
 
 		glViewport(0, 0, width, height);
 
+		audioController = new AudioController();
+		audioController->Initialize();
+
 		state = RUNNING;
 
 		return true;

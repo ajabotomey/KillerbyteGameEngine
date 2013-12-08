@@ -3,6 +3,7 @@
 
 #include "Camera.h"
 #include "Keyboard.h"
+#include "AudioController.h"
 
 namespace KillerbyteGameEngine
 {
@@ -23,12 +24,13 @@ namespace KillerbyteGameEngine
 		int Run();
 		void Frame();
 
+		// Accessors
 		State GetState() const;
 		static Game* GetInstance();
 		static double GetGameTime();
-
 		unsigned int GetWidth() const;
 		unsigned int GetHeight() const;
+		inline AudioController* GetAudioController() const { return audioController; }
 
 		// Special Input Events unique for each game
 		virtual void KeyEvent(Keyboard::KeyEvent evt, int key);
@@ -51,6 +53,9 @@ namespace KillerbyteGameEngine
 		unsigned int frameCount;
 		unsigned int frameRate;
 		double frameLastFPS;
+
+		// Controllers
+		AudioController* audioController;
 	};
 }
 

@@ -171,6 +171,7 @@ obj/local/armeabi/objs-debug/TestTriangle/TestTriangle.o: \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
  ../../KillerbyteGameEngine/src/Game.h \
  ../../KillerbyteGameEngine/src/Camera.h \
  ../../KillerbyteGameEngine/src/Object.h \
@@ -179,9 +180,11 @@ obj/local/armeabi/objs-debug/TestTriangle/TestTriangle.o: \
  ../../KillerbyteGameEngine/src/Vector3.h \
  ../../KillerbyteGameEngine/src/Matrix44.h \
  ../../KillerbyteGameEngine/src/Keyboard.h \
+ ../../KillerbyteGameEngine/src/AudioClip.h \
+ ../../KillerbyteGameEngine/src/File.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
  ../../KillerbyteGameEngine/src/Platform.h \
  ../../KillerbyteGameEngine/src/FileSystem.h \
- /cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
  ../../KillerbyteGameEngine/src/Shader.h \
  ../../KillerbyteGameEngine/src/Model.h
 
@@ -529,6 +532,8 @@ jni/../..//TestTriangle.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h:
 
+/cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h:
+
 ../../KillerbyteGameEngine/src/Game.h:
 
 ../../KillerbyteGameEngine/src/Camera.h:
@@ -545,11 +550,15 @@ jni/../..//TestTriangle.h:
 
 ../../KillerbyteGameEngine/src/Keyboard.h:
 
+../../KillerbyteGameEngine/src/AudioClip.h:
+
+../../KillerbyteGameEngine/src/File.h:
+
+/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:
+
 ../../KillerbyteGameEngine/src/Platform.h:
 
 ../../KillerbyteGameEngine/src/FileSystem.h:
-
-/cygdrive/c/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:
 
 ../../KillerbyteGameEngine/src/Shader.h:
 

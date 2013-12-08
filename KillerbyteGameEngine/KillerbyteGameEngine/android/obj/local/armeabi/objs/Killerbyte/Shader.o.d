@@ -169,6 +169,7 @@ obj/local/armeabi/objs/Killerbyte/Shader.o: jni/../../src/Shader.cpp \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
  /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
+ /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
  jni/../../src/Object.h
 
 jni/../../src/Shader.h:
@@ -512,5 +513,7 @@ jni/../../src/Base.h:
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h:
 
 /cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h:
+
+/cygdrive/c/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h:
 
 jni/../../src/Object.h:
