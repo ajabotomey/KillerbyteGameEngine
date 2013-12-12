@@ -54,6 +54,12 @@
             unless="sdk.dir"
     />
 
+	<target name="-post-compile">
+		<copy todir="assets">
+			<fileset dir="../assets"/>
+		</copy>
+	</target>
+	
     <!--
         Import per project custom build rules if present at the root of the project.
         This is the place to put custom intermediary targets such as:
@@ -66,7 +72,7 @@
             -post-build
             -pre-clean
     -->
-    <import file="custom_rules.xml" optional="true" />
+    <!--<import file="custom_rules.xml" optional="true" />-->
 
     <!-- Import the actual build file.
 

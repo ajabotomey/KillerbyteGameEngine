@@ -1,2 +1,2 @@
-C:\users\aj\desktop\killerbytegameengine\killerbytegameengine\TestTriangle\android\bin\AndroidManifest.xml : \
-C:\users\aj\desktop\killerbytegameengine\killerbytegameengine\TestTriangle\android\AndroidManifest.xml \
+C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\android\bin\AndroidManifest.xml : \
+C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\android\AndroidManifest.xml \

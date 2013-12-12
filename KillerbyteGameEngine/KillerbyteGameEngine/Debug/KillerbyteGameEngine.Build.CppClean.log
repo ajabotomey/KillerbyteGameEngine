@@ -5,6 +5,7 @@ c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengi
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\camera.obj
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\file.obj
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\filesystem.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\game.obj
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\logmanager.obj
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\mainwin32.obj
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\matrix44.obj
@@ -12,6 +13,10 @@ c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengi
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\platform.obj
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\platformwin32.obj
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\shader.obj
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\debug\killerbytegameengine.lib
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\killerby.d2c44653.tlog\cl.command.1.tlog
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\killerby.d2c44653.tlog\cl.read.1.tlog
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\killerby.d2c44653.tlog\cl.write.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\killerby.d2c44653.tlog\lib-link.read.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\killerby.d2c44653.tlog\lib-link.write.1.tlog
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\debug\killerby.d2c44653.tlog\lib.command.1.tlog
