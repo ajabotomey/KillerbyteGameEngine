@@ -1,5 +1,5 @@
-﻿Build started 12/12/2013 3:39:33 PM.
-     1>Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 12/12/2013 6:42:22 PM.
+     1>Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\glew\include" /I"C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\\external-deps\OpenAL\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TestTriangle.cpp
          TestTriangle.cpp
@@ -26,8 +26,8 @@
      1>TestTriangle.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
      1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
          TestTriangle.vcxproj -> C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Debug\TestTriangle.exe
-     1>Done Building Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\TestTriangle\TestTriangle.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.18
+Time Elapsed 00:00:01.63

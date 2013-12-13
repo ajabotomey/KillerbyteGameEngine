@@ -117,15 +117,15 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 			break;
 
 		case Keyboard::KEY_P:
-			//GetAudioController()->PlayClip("assets/chirp.wav");
+			GetAudioController()->PlayClip("assets/chirp.wav");
 			break;
 
 		case Keyboard::KEY_O:
-			//GetAudioController()->PauseClip("assets/chirp.wav");
+			GetAudioController()->PauseClip("assets/chirp.wav");
 			break;
 
 		case Keyboard::KEY_I:
-			//GetAudioController()->StopClip("assets/chirp.wav");
+			GetAudioController()->StopClip("assets/chirp.wav");
 			break;
 		}
 	}

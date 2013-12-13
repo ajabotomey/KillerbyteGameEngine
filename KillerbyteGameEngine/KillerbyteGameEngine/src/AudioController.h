@@ -96,12 +96,12 @@ namespace KillerbyteGameEngine
 		SLPlayItf player;
 		SLBufferQueueItf playerQueue;
 
-		std::vector<SLSound> sounds;
+		std::vector<SLSound> slSounds;
 #else
 		ALCdevice* device;
 		ALCcontext* context;
 
-		std::vector<ALSound> sounds;
+		std::vector<ALSound> alSounds;
 #endif
 	};
 }

@@ -82,12 +82,15 @@ namespace KillerbyteGameEngine
 
 	FILE* File::Open(const char* filename, const char* fileMode)
 	{
-		// If android, run asset to file conversion and return file
-#ifndef __ANDROID__
-		file = fopen(filename, fileMode);
+		std::string fullname;
+
+		// If android, run asset to file conversion and return the full file path
+#ifdef __ANDROID__
+		fullname = ConvertAssetToFile(filename);
 #else
-		ConvertAssetToFile(filename);
+		fullname = filename;
 #endif
+		file = fopen(fullname.c_str(), fileMode);
 
 		return file;
 	}
@@ -150,7 +153,7 @@ namespace KillerbyteGameEngine
 
 		LOGI("Asset open");
 
-		file = fopen(fullPath.c_str(), "wb");
+		file = fopen(fullPath.c_str(), "w");
 		if (file == NULL)
 		{
 			LOGI("File won't open");
@@ -172,13 +175,13 @@ namespace KillerbyteGameEngine
 		//LOGI("Count is %d", count);
 		//LOGI("Buffer: %s\n", buffer); // Why is it crashing when I print the buffer
 
-		char* buffer = (char*) malloc(sizeof(char) * length);
+		//char* buffer = (char*) malloc(length);
 
-		int count;
-		while ((count = AAsset_read(asset, buffer, length)) > 0)
-		{
-			fwrite(buffer, count, length, file);
-		}
+		//int count;
+		//while ((count = AAsset_read(asset, buffer, length)) > 0)
+		//{
+		//	fwrite(buffer, count, length, file);
+		//}
 
 		//fwrite(buffer, sizeof(char) * length, length, file);
 		//while ((count = AAsset_read(asset, buffer, length)) > 0)
@@ -198,46 +201,53 @@ namespace KillerbyteGameEngine
 		//if (asset)
 		//{
 		//	LOGI("Asset is open");
-		//	const void* data = AAsset_getBuffer(asset);
-		//	int length = AAsset_getLength(asset);
+		const void* data = AAsset_getBuffer(asset);
+		//int length = AAsset_getLength(asset);
 
-		//	LOGI("buffer and length retrieved");
+		LOGI("buffer and length retrieved");
 
-		//	file = fopen(fullPath.c_str(), "w");
+		int result = fwrite(data, sizeof(unsigned char), length, file);
+
+		LOGI("Result = %d", result);
+
+			//	file = fopen(fullPath.c_str(), "w");
 
 			/*while ((nb_read = AAsset_read(asset, buf, BUFFER_SIZE)) > 0)
-			{
-			fwrite(buf, nb_read, BUFFER_SIZE, file);
-			}*/
+		{
+		fwrite(buf, nb_read, BUFFER_SIZE, file);
+		}*/
 
-			//LOGI("The length of the file is %d", length);
+		//LOGI("The length of the file is %d", length);
 
-			//if (file != NULL)
-			//{
-			//	LOGI("File is open");
-			//	int result = fwrite(data, sizeof(unsigned char), length, file);
+		//if (file != NULL)
+		//{
+		//	LOGI("File is open");
+		//	int result = fwrite(data, sizeof(unsigned char), length, file);
 
-			//	if (fclose(file) != 0)
-			//	{
-			//		LOGI("Failed to close the replica file");
-			//	}
+		//	if (fclose(file) != 0)
+		//	{
+		//		LOGI("Failed to close the replica file");
+		//	}
 
-			//	if (result != length)
-			//	{
-			//		LOGI("Failed to write all the data from the apk to the file");
-			//	}
-			//}
-			//else
-			//{
-			//	LOGI("Failed to open file");
-			//}
-
-			//delete data;
-			//data = NULL;
+		//	if (result != length)
+		//	{
+		//		LOGI("Failed to write all the data from the apk to the file");
+		//	}
+		//}
+		//else
+		//{
+		//	LOGI("Failed to open file");
 		//}
 
-		free(buffer);
-		buffer = NULL;
+		//delete data;
+		//data = NULL;
+		//}
+
+		//free(buffer);
+		//buffer = NULL;
+
+		
+		fclose(file);
 
 		AAsset_close(asset);
 

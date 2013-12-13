@@ -148,7 +148,7 @@ namespace KillerbyteGameEngine
 		sound.source = source;
 		sound.name = filename;
 
-		sounds.push_back(sound);
+		alSounds.push_back(sound);
 	}
 
 	void AudioController::PlayALClip(std::string name)
@@ -156,7 +156,7 @@ namespace KillerbyteGameEngine
 		ALuint source, buffer;
 
 		// Iterate through the sounds vector until the name matches
-		for (std::vector<ALSound>::iterator i = sounds.begin(); i != sounds.end(); i++)
+		for (std::vector<ALSound>::iterator i = alSounds.begin(); i != alSounds.end(); i++)
 		{
 			if ((*i).name == name)
 			{
@@ -174,7 +174,7 @@ namespace KillerbyteGameEngine
 		ALuint source, buffer;
 
 		// Iterate through the sounds vector until the name matches
-		for (std::vector<ALSound>::iterator i = sounds.begin(); i != sounds.end(); i++)
+		for (std::vector<ALSound>::iterator i = alSounds.begin(); i != alSounds.end(); i++)
 		{
 			if ((*i).name == name)
 			{
@@ -192,7 +192,7 @@ namespace KillerbyteGameEngine
 		ALuint source, buffer;
 
 		// Iterate through the sounds vector until the name matches
-		for (std::vector<ALSound>::iterator i = sounds.begin(); i != sounds.end(); i++)
+		for (std::vector<ALSound>::iterator i = alSounds.begin(); i != alSounds.end(); i++)
 		{
 			if ((*i).name == name)
 			{
@@ -320,18 +320,12 @@ namespace KillerbyteGameEngine
 		int channel, sampleRate, bps, size;
 		char* bufferData = clip.OpenClip(filename, channel, sampleRate, bps, size);
 
-		LOGI("Sound data is %s", bufferData);
-		LOGI("Channels = %d", channel);
-		LOGI("Sample Rate = %d", sampleRate);
-		LOGI("Bits per sample = %d", bps);
-		LOGI("Size of file = %d", size);
-
 		SLSound sound;
 		sound.bufferData = bufferData;
 		sound.length = size;
 		sound.name = filename;
 
-		//sounds.push_back(sound);
+		slSounds.push_back(sound); // Here is where it crashes
 	}
 
 	void AudioController::PlaySLClip(std::string name)
@@ -342,7 +336,7 @@ namespace KillerbyteGameEngine
 		off_t length;
 		if (playerState == SL_OBJECT_STATE_REALIZED)
 		{
-			for (std::vector<SLSound>::iterator i = sounds.begin(); i != sounds.end(); i++)
+			for (std::vector<SLSound>::iterator i = slSounds.begin(); i != slSounds.end(); i++)
 			{
 				if ((*i).name == name)
 				{
