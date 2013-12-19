@@ -38,6 +38,29 @@ namespace KillerbyteGameEngine
 #endif
 	}
 
+	void LogManager::WriteLogToConsole(const char* message, ...)
+	{
+		char ErrStr[128];
+		char Status[128];
+		int flag = 1;
+
+#if defined WIN32 || defined __linux__ || defined TARGET_OS_OSX
+		va_list arglist;
+
+		va_start(arglist, message);
+
+		//customized operations...
+		if (flag<0)
+			vsprintf(ErrStr, message, arglist);
+		else if (flag >= 0)
+			vsprintf(Status, message, arglist);
+
+		va_end(arglist);
+#elif defined __ANDROID__
+		LOGI("%s", message);
+#endif
+	}
+
 #if defined WIN32 || defined __linux__ || defined TARGET_OS_OSX
 	bool LogManager::LoadLogFile(const char* filename)
 	{

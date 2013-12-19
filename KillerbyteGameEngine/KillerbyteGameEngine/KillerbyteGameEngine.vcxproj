@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\external-deps\OpenAL\include;$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\include;$(SolutionDir)\external-deps\zlib\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\external-deps\OpenAL\include;$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\include;$(SolutionDir)\external-deps\zlib\include;$(SolutionDir)\external-deps\TinyXml\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -84,8 +84,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\AudioClip.h" />
-    <ClInclude Include="src\AudioController.h" />
+    <ClInclude Include="src\Audio\AudioClip.h" />
+    <ClInclude Include="src\Audio\AudioController.h" />
     <ClInclude Include="src\Base.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\File.h" />
@@ -95,30 +95,34 @@
     <ClInclude Include="src\Keyboard.h" />
     <ClInclude Include="src\KillerbyteGameEngine.h" />
     <ClInclude Include="src\LogManager.h" />
-    <ClInclude Include="src\Matrix44.h" />
+    <ClInclude Include="src\Math\Matrix44.h" />
     <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\Object.h" />
-    <ClInclude Include="src\Platform.h" />
+    <ClInclude Include="src\Platform\Platform.h" />
+    <ClInclude Include="src\Scene.h" />
     <ClInclude Include="src\Shader.h" />
     <ClInclude Include="src\Texture.h" />
-    <ClInclude Include="src\Vector2.h" />
-    <ClInclude Include="src\Vector3.h" />
-    <ClInclude Include="src\Vector4.h" />
+    <ClInclude Include="src\Math\Vector2.h" />
+    <ClInclude Include="src\Math\Vector3.h" />
+    <ClInclude Include="src\Math\Vector4.h" />
     <ClInclude Include="Vector4.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AudioClip.cpp" />
-    <ClCompile Include="src\AudioController.cpp" />
+    <ClCompile Include="src\Audio\AudioClip.cpp" />
+    <ClCompile Include="src\Audio\AudioController.cpp" />
     <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\File.cpp" />
     <ClCompile Include="src\FileSystem.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\LogManager.cpp" />
     <ClCompile Include="src\MainWin32.cpp" />
-    <ClCompile Include="src\Matrix44.cpp" />
+    <ClCompile Include="src\Math\Matrix44.cpp" />
     <ClCompile Include="src\Model.cpp" />
-    <ClCompile Include="src\Platform.cpp" />
-    <ClCompile Include="src\PlatformWin32.cpp" />
+    <ClCompile Include="src\Node.cpp" />
+    <ClCompile Include="src\Platform\Platform.cpp" />
+    <ClCompile Include="src\Platform\PlatformWin32.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\Shader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

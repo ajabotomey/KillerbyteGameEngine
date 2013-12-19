@@ -2,12 +2,12 @@
 
 #include "Base.h"
 #include "Game.h"
-#include "Platform.h"
+#include "Platform/Platform.h"
 
 // Math
-#include "Vector2.h"
-#include "Vector3.h"
-#include "Matrix44.h"
+#include "Math/Vector2.h"
+#include "Math/Vector3.h"
+#include "Math/Matrix44.h"
 
 // Graphics
 #include "Camera.h"
@@ -18,4 +18,9 @@
 #include "Keyboard.h"
 
 // Audio
-#include "AudioClip.h"
+#include "Audio/AudioController.h"
+#include "Audio/AudioClip.h"
+
+// Scene
+#include "Scene.h"
+#include "Node.h"

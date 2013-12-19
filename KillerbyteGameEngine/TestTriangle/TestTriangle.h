@@ -33,6 +33,8 @@ private: // Variables
 	GLuint rectangleInfo[2];
 	Model rectangle;
 	Shader shader;
+
+	AudioClip clip;
 };
 
 #endif

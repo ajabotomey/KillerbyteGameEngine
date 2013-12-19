@@ -3,20 +3,22 @@ LOCAL_PATH := $(call my-dir)/../../src
 include $(CLEAR_VARS)
 LOCAL_MODULE := libKillerbyte
 LOCAL_SRC_FILES := \
-    AudioController.cpp \
-    AudioClip.cpp \
+    Audio/AudioController.cpp \
+    Audio/AudioClip.cpp \
     Camera.cpp \
     File.cpp \
     FileSystem.cpp \
     Game.cpp \
     LogManager.cpp \
-    Matrix44.cpp \
+    Node.cpp \
+    Math/Matrix44.cpp \
     Model.cpp \
-    Platform.cpp \
-    PlatformAndroid.cpp \
+    Platform/Platform.cpp \
+    Platform/PlatformAndroid.cpp \
+    Scene.cpp \
     Shader.cpp 
 
-LOCAL_CFLAGS := -D__ANDROID__
+LOCAL_CFLAGS := -D__ANDROID__ -I"../../external-deps/OpenAL/include" -I"../../external-deps/TinyXML/include"
 LOCAL_STATIC_LIBRARIES := android_native_app_glue
 
 include $(BUILD_STATIC_LIBRARY)

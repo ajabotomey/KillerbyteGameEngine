@@ -3,7 +3,7 @@
 
 #include "Camera.h"
 #include "Keyboard.h"
-#include "AudioController.h"
+#include "Audio/AudioController.h"
 
 namespace KillerbyteGameEngine
 {
@@ -42,6 +42,7 @@ namespace KillerbyteGameEngine
 		virtual void Render(float elapsedTime) = 0;
 
 		Camera* camera;
+		Scene* scene;
 	private: 
 		bool Startup();
 		void Shutdown();

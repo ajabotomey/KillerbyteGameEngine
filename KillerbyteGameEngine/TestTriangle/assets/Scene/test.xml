@@ -1,0 +1,11 @@
+<?xml version ="1.0"?>
+<scene>
+	<name>Test Level</name>
+	<width>1000</width>
+	<height>700</height>
+	<resources>
+		<audio>
+			<file name="assets/Audio/chirp.wav" alias = "chirp" />
+		</audio>
+	</resources>
+</scene>

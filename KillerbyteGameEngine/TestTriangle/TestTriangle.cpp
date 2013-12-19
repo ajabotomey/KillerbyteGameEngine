@@ -18,13 +18,16 @@ GLubyte vIndices[] =
 
 TestTriangle::TestTriangle()
 {
-	
+	scene = NULL;
 }
 
 void TestTriangle::Initialize()
 {
 	InitRectangle();
-	GetAudioController()->LoadClip("assets/chirp.wav", true);
+	scene = new Scene("assets/test.xml");
+	//GetAudioController()->LoadClip("assets/chirp.wav", true);
+	//GetAudioController()->LoadClip("assets/noise.wav", true);
+	//clip.OpenClip("assets/chirp.wav");
 }
 
 void TestTriangle::Finalize()
@@ -117,7 +120,7 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 			break;
 
 		case Keyboard::KEY_P:
-			GetAudioController()->PlayClip("assets/chirp.wav");
+			GetAudioController()->PlayClip("chirp");
 			break;
 
 		case Keyboard::KEY_O:

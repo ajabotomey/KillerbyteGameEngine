@@ -1,5 +1,5 @@
 // I need to shorten this main loop and throw a lot of this code into the Win32 Platform class
-#include "Platform.h" // Will be a header file that contains all the headers files required
+#include "Platform/Platform.h" // Will be a header file that contains all the headers files required
 
 #ifndef _WINDOWS_
 	#define WIN32_LEAN_AND_MEAN

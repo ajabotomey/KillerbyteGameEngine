@@ -30,6 +30,8 @@ namespace KillerbyteGameEngine
 		bool DoesExist();
 		void CloseFile();
 
+		inline FILE* GetCFile() { return file; }
+
 	protected:
 		FILE* file;
 

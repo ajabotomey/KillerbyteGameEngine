@@ -1,6 +1,6 @@
 #include "Base.h"
 #include "Game.h"
-#include "Platform.h"
+#include "Platform/Platform.h"
 
 namespace KillerbyteGameEngine
 {
@@ -11,6 +11,7 @@ namespace KillerbyteGameEngine
 		initialized = false;
 		instance = this;
 		camera = new Camera();
+		audioController = NULL;
 	}
 
 	Game::~Game()

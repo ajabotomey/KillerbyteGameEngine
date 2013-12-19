@@ -1,6 +1,8 @@
 #ifndef LOGMANAGER_H
 #define LOGMANAGER_H
 
+#include <cstdarg>
+
 #include "Base.h"
 #include "Object.h"
 
@@ -24,7 +26,8 @@ namespace KillerbyteGameEngine
 		bool LoadLogFile(const char* file);
 #endif
 		
-		// Figure out logging for Android and iOS
+		// Default log to console
+		void WriteLogToConsole(const char *message, ...);
 	protected:
 		LogManager();
 	private:

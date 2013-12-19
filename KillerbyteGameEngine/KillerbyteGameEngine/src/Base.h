@@ -6,12 +6,14 @@
 // TODO: Add Support for iOS, Mac OSX and Android
 
 // C++ Includes
+#include <iostream>
 #include <cstdlib>
 #include <string>
 #include <vector>
 #include <fstream>
 #include <sstream>
 #include <map>
+#include <memory>
 
 // Image Loading
 //#include <png.h>
@@ -53,6 +55,9 @@
 // A nice function for checking array size
 template <typename T, unsigned S>
 inline unsigned arraysize(const T(&v)[S]) { return S; }
+
+// Include this here so we can easily log stuff with the Log Manager
+#include "LogManager.h"
 
 // Android Logging
 #ifdef __ANDROID__
