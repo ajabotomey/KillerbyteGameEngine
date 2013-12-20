@@ -57,12 +57,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\OpenAL\include;$(SolutionDir)\external-deps\TinyXML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\OpenAL\include;$(SolutionDir)\external-deps\TinyXML\include;$(SolutionDir)\external-deps\libpng\include;$(SolutionDir)\external-deps\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenAL32.lib;OpenGL32.lib;GlU32.lib;glew32.lib;libpng14.lib;zlib.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenAL32.lib;OpenGL32.lib;GlU32.lib;glew32.lib;libpng16.lib;zlib.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)\external-deps\OpenAL\lib\Windows;$(SolutionDir)\external-deps\glew\lib\windows;$(SolutionDir)\external-deps\glew\include;$(SolutionDir)\external-deps\libpng\lib\windows;$(SolutionDir)\external-deps\zlib\lib\windows;$(SolutionDir)\external-deps\TinyXML\lib\windows</AdditionalLibraryDirectories>
       <LinkErrorReporting>QueueForNextLogin</LinkErrorReporting>
     </Link>

@@ -50,7 +50,9 @@ namespace KillerbyteGameEngine
 		XMLElement* e = audio->FirstChildElement("file");
 		for (; e != NULL; e = e->NextSiblingElement("file"))
 		{
-			// Retrive the data first
+			// Check if the node already exists
+
+			// Retrive the data second
 			std::string name = e->Attribute("name");
 			std::string alias = e->Attribute("alias");
 
@@ -62,6 +64,13 @@ namespace KillerbyteGameEngine
 
 			AddNode(node);
 		}
+
+		// Loading Resources
+		XMLElement* image = resources->FirstChildElement("image");
+		
+
+		// Loading the level itself
+
 	}
 
 	// Simply add the node onto the end of the line

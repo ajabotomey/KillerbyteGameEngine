@@ -13,6 +13,7 @@
 #include "Camera.h"
 #include "Shader.h"
 #include "Model.h"
+#include "Texture.h"
 
 // Input
 #include "Keyboard.h"

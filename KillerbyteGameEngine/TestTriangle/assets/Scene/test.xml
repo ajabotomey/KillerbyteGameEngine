@@ -7,5 +7,21 @@
 		<audio>
 			<file name="assets/Audio/chirp.wav" alias = "chirp" />
 		</audio>
+		<image>
+			<file name="assets/Image/dudette_01.png" alias = "dudette" />
+		</image>
 	</resources>
+	<level>
+		<player>
+			<position> <!-- The Center of the object -->
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<Z>0.0</Z>
+			</position>
+			<width>100</width>
+			<height>200</height>
+			<!--<texture alias = "dudette" /> -->
+			<!-- Add a model resource link here if we are using a model otherwise we create a rectangle -->
+		</player>
+	</level>
 </scene>

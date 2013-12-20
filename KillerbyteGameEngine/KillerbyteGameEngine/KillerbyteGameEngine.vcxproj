@@ -115,6 +115,7 @@
     <ClCompile Include="src\File.cpp" />
     <ClCompile Include="src\FileSystem.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Image.cpp" />
     <ClCompile Include="src\LogManager.cpp" />
     <ClCompile Include="src\MainWin32.cpp" />
     <ClCompile Include="src\Math\Matrix44.cpp" />
@@ -124,6 +125,7 @@
     <ClCompile Include="src\Platform\PlatformWin32.cpp" />
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

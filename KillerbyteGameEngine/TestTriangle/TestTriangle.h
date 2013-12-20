@@ -34,7 +34,7 @@ private: // Variables
 	Model rectangle;
 	Shader shader;
 
-	AudioClip clip;
+	Texture texture;
 };
 
 #endif

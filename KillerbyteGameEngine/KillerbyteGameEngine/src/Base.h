@@ -16,7 +16,7 @@
 #include <memory>
 
 // Image Loading
-//#include <png.h>
+#include <png.h>
 
 // Audio Loading
 #ifdef __ANDROID__

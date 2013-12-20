@@ -1,9 +1,10 @@
 ﻿  TestTriangle.cpp
 c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\killerbytegameengine\src\math\vector3.h(41): warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
-c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(44): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
-c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(45): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
-c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(111): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(118): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(72): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(73): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(150): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\aj\desktop\killerbytegameengine\killerbytegameengine\testtriangle\testtriangle.cpp(157): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
 TestTriangle.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   TestTriangle.vcxproj -> C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Debug\TestTriangle.exe

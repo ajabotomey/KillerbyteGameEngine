@@ -300,10 +300,10 @@ namespace KillerbyteGameEngine
 	void Platform::Run()
 	{
 		// Allocate a console
-		AllocConsole();
-		freopen("CONSIN$", "r", stdin);
-		freopen("CONOUT$", "w", stdout);
-		freopen("CONOUT$", "w", stderr);
+		//AllocConsole();
+		//freopen("CONSIN$", "r", stdin);
+		//freopen("CONOUT$", "w", stdout);
+		//freopen("CONOUT$", "w", stderr);
 
 		// Get the initial time
 		LARGE_INTEGER timePerSecond;

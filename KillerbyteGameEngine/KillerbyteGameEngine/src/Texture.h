@@ -3,6 +3,7 @@
 
 #include "Base.h"
 #include "Object.h"
+#include "Image.h"
 
 namespace KillerbyteGameEngine
 {
@@ -13,8 +14,8 @@ namespace KillerbyteGameEngine
 		~Texture();
 
 		bool LoadTextureFromFile(const char* filename);
+		inline GLuint GetTextureHandle() { return textureHandle; }
 	private:
-		void createTexture();
 
 		GLuint textureHandle;
 	};

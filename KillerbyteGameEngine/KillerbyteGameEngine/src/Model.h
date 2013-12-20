@@ -11,6 +11,7 @@
 #include "Base.h"
 #include "Object.h"
 #include "Math/Matrix44.h"
+#include "Math/Vector2.h"
 #include <vector>
 
 namespace KillerbyteGameEngine
@@ -18,11 +19,18 @@ namespace KillerbyteGameEngine
 	class Model : public Object
 	{
 	public:
+		struct Vertex
+		{
+			Vector3 position;
+			Vector2 texCoords;
+		};
+
 		Model();
 		~Model();
 	
 		//void LoadData(std::vector<T> data, std::vector<T> newData);
-		void LoadVertices(GLfloat* data, int length);
+		void LoadVertices(Vector3* positions, Vector2* texCoords, int length);
+		//void LoadTexCoords(Vector2* data, int length);
 		void LoadIndices(GLubyte* data, int length);
 
 		void Initialize();
@@ -40,7 +48,9 @@ namespace KillerbyteGameEngine
 		void SetPosition(Vector3 newPosition);
 		inline void SetPositionX(float x) { position.setX(x); }
 	private:
-		std::vector<GLfloat> vertices;
+		//std::vector<Vector3> vertices;
+		//std::vector<Vector2> texCoords;
+		std::vector<Vertex> vertices;
 		std::vector<GLubyte> indices;
 
 		// Influences the model matrix

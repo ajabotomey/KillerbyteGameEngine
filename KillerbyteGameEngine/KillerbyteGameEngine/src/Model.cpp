@@ -20,7 +20,10 @@ namespace KillerbyteGameEngine
 
 		// Set up the vertex buffer
 		glBindBuffer(GL_ARRAY_BUFFER, info[0]);
-		glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(GLfloat), &vertices[0], GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
+
+		//glBindBuffer(GL_ARRAY_BUFFER, info[1]);
+		//glBufferData(GL_ARRAY_BUFFER, texCoords.size() * sizeof(Vector2), &texCoords[0], GL_STATIC_DRAW);
 
 		// Set up the index buffer
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, info[1]);
@@ -34,8 +37,10 @@ namespace KillerbyteGameEngine
 
 	void Model::Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle)
 	{
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 		glEnableVertexAttribArray(0);
+		glEnableVertexAttribArray(1);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)12);
 
 		glUniformMatrix4fv(handle, 1, GL_FALSE, (GLfloat*)&mvpMatrix(0, 0));
 		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_BYTE, 0);
@@ -54,13 +59,24 @@ namespace KillerbyteGameEngine
 		position = newPosition;
 	}
 
-	void Model::LoadVertices(GLfloat* data, int length)
+	void Model::LoadVertices(Vector3* positions, Vector2* texCoords, int length)
 	{
 		for (int i = 0; i < length; i++)
 		{
-			vertices.push_back(data[i]);
+			Vertex vertex;
+			vertex.position = positions[i];
+			vertex.texCoords = texCoords[i];
+			vertices.push_back(vertex);
 		}
 	}
+
+	//void Model::LoadTexCoords(Vector2* data, int length)
+	//{
+	//	for (int i = 0; i < length; i++)
+	//	{
+	//		texCoords.push_back(data[i]);
+	//	}
+	//}
 
 	void Model::LoadIndices(GLubyte* data, int length)
 	{

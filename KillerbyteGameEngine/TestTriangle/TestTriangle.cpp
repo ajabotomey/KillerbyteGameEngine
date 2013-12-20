@@ -2,13 +2,37 @@
 
 TestTriangle game;
 
-GLfloat vVertices[] =
+//GLfloat vVertices[] =
+//{
+//	50.0f,  -100.0f, 0.0f,
+//	50.0f, 100.0f, 0.0f,
+//	-50.0f, 100.0f, 0.0f,
+//	-50.0f, -100.0f, 0.0f
+//};
+
+Vector3 vVertices[] =
 {
-	50.0f,  -100.0f, 0.0f,
-	50.0f, 100.0f, 0.0f,
-	-50.0f, 100.0f, 0.0f,
-	-50.0f, -100.0f, 0.0f
+	Vector3(50.0f, -100.0f, 0.0f),
+	Vector3(50.0f, 100.0f, 0.0f),
+	Vector3(-50.0f, 100.0f, 0.0f),
+	Vector3(-50.0f, -100.0f, 0.0f)
 };
+
+Vector2 vTexCoords[] =
+{
+	Vector2(1.0, 0.0),
+	Vector2(1.0, 1.0),
+	Vector2(0.0, 1.0),
+	Vector2(0.0, 0.0)
+};
+
+//GLfloat vTexCoords[] = 
+//{
+//	1.0, 0.0,
+//	1.0, 1.0,
+//	0.0, 1.0,
+//	0.0, 0.0
+//};
 
 GLubyte vIndices[] =
 {
@@ -28,6 +52,10 @@ void TestTriangle::Initialize()
 	//GetAudioController()->LoadClip("assets/chirp.wav", true);
 	//GetAudioController()->LoadClip("assets/noise.wav", true);
 	//clip.OpenClip("assets/chirp.wav");
+	if (!texture.LoadTextureFromFile("assets/Image/dudette_01.png"))
+	{
+		return;
+	}
 }
 
 void TestTriangle::Finalize()
@@ -64,6 +92,13 @@ void TestTriangle::Render(float elapsedTime)
 
 	glUseProgram(shader.GetProgram());
 
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, texture.GetTextureHandle());
+
+	int TextureID = glGetUniformLocation(shader.GetProgram(), "texture");
+
+	glUniform1i(TextureID, 0);
+
 	rectangle.Render(elapsedTime, mvpMatrix, mvpMatrixHandle);
 }
 
@@ -74,14 +109,17 @@ void TestTriangle::InitRectangle()
 		"attribute vec4 vPosition;                \n"
 		"void main()                              \n"
 		"{                                        \n"
+		"   gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;\n"
 		"   gl_Position = MVPMatrix * vPosition;  \n"
 		"}                                        \n";
 
 	const char fShaderStr[] =
 		"precision mediump float;\n"
+		"uniform sampler2D texture;\n"
 		"void main()                                  \n"
 		"{                                            \n"
-		"  gl_FragColor = vec4 ( 0.0, 1.0, 0.0, 1.0 );\n"
+		"  vec4 TextureColor = texture2D(texture, gl_TexCoord[0].st);\n"
+		"  gl_FragColor = TextureColor;\n"
 		"}                                            \n";
 
 	shader.LoadFromSource(vShaderStr, fShaderStr);
@@ -92,7 +130,8 @@ void TestTriangle::InitRectangle()
 
 	mvpMatrixHandle = glGetUniformLocation(shader.GetProgram(), "MVPMatrix");
 
-	rectangle.LoadVertices(vVertices, arraysize(vVertices));
+	rectangle.LoadVertices(vVertices, vTexCoords, arraysize(vVertices));
+	//rectangle.LoadTexCoords(vTexCoords, arraysize(vTexCoords));
 	rectangle.LoadIndices(vIndices, arraysize(vIndices));
 	rectangle.Initialize();
 }

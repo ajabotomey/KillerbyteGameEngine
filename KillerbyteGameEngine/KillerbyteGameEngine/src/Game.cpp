@@ -54,6 +54,8 @@ namespace KillerbyteGameEngine
 			return false;
 		}
 
+		glEnable(GL_TEXTURE_2D);
+
 		glViewport(0, 0, width, height);
 
 		audioController = new AudioController();
