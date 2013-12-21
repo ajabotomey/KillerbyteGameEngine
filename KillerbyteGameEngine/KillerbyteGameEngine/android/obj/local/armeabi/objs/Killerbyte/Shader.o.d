@@ -169,6 +169,12 @@ obj/local/armeabi/objs/Killerbyte/Shader.o: jni/../../src/Shader.cpp \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_iter.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h \
+ ../../external-deps/libpng/include/png.h \
+ ../../external-deps/libpng/include/pnglibconf.h \
+ ../../external-deps/libpng/include/pngconf.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Android.h \
@@ -187,7 +193,9 @@ obj/local/armeabi/objs/Killerbyte/Shader.o: jni/../../src/Shader.cpp \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdarg \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_cstdarg.h \
  jni/../../src/Object.h \
- C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
+ jni/../../src/File.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio
 
 jni/../../src/Shader.h:
 
@@ -531,6 +539,18 @@ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_
 
 C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h:
 
+../../external-deps/libpng/include/png.h:
+
+../../external-deps/libpng/include/pnglibconf.h:
+
+../../external-deps/libpng/include/pngconf.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h:
+
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h:
 
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
@@ -568,3 +588,7 @@ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_cstdarg.h:
 jni/../../src/Object.h:
 
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h:
+
+jni/../../src/File.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:

@@ -184,6 +184,12 @@ obj/local/armeabi/objs-debug/TestTriangle/__/KillerbyteGameEngine/src/MainAndroi
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_iter.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h \
+ jni/../../../external-deps/libpng/include/png.h \
+ jni/../../../external-deps/libpng/include/pnglibconf.h \
+ jni/../../../external-deps/libpng/include/pngconf.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Android.h \
@@ -232,6 +238,9 @@ obj/local/armeabi/objs-debug/TestTriangle/__/KillerbyteGameEngine/src/MainAndroi
  ../../KillerbyteGameEngine/src/Game.h \
  jni/../..//../KillerbyteGameEngine/src/Shader.h \
  jni/../..//../KillerbyteGameEngine/src/Model.h \
+ jni/../..//../KillerbyteGameEngine/src/Texture.h \
+ jni/../..//../KillerbyteGameEngine/src/Image.h \
+ jni/../..//../KillerbyteGameEngine/src/File.h \
  jni/../..//../KillerbyteGameEngine/src/Audio/AudioClip.h \
  jni/../..//../KillerbyteGameEngine/src/Scene.h \
  jni/../..//../KillerbyteGameEngine/src/Node.h
@@ -604,6 +613,18 @@ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_
 
 C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h:
 
+jni/../../../external-deps/libpng/include/png.h:
+
+jni/../../../external-deps/libpng/include/pnglibconf.h:
+
+jni/../../../external-deps/libpng/include/pngconf.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h:
+
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h:
 
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
@@ -699,6 +720,12 @@ jni/../..//../KillerbyteGameEngine/src/Platform/Platform.h:
 jni/../..//../KillerbyteGameEngine/src/Shader.h:
 
 jni/../..//../KillerbyteGameEngine/src/Model.h:
+
+jni/../..//../KillerbyteGameEngine/src/Texture.h:
+
+jni/../..//../KillerbyteGameEngine/src/Image.h:
+
+jni/../..//../KillerbyteGameEngine/src/File.h:
 
 jni/../..//../KillerbyteGameEngine/src/Audio/AudioClip.h:
 

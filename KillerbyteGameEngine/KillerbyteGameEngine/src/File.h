@@ -29,6 +29,7 @@ namespace KillerbyteGameEngine
 		
 		bool DoesExist();
 		void CloseFile();
+		long GetLength();
 
 		inline FILE* GetCFile() { return file; }
 

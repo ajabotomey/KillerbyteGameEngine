@@ -170,6 +170,12 @@ obj/local/armeabi/objs/Killerbyte/Audio/AudioController.o: \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_iter.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h \
+ ../../external-deps/libpng/include/png.h \
+ ../../external-deps/libpng/include/pnglibconf.h \
+ ../../external-deps/libpng/include/pngconf.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Android.h \
@@ -541,6 +547,18 @@ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c:
 C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_iter.h:
 
 C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h:
+
+../../external-deps/libpng/include/png.h:
+
+../../external-deps/libpng/include/pnglibconf.h:
+
+../../external-deps/libpng/include/pngconf.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h:
 
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h:
 

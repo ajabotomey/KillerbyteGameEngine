@@ -52,10 +52,6 @@ void TestTriangle::Initialize()
 	//GetAudioController()->LoadClip("assets/chirp.wav", true);
 	//GetAudioController()->LoadClip("assets/noise.wav", true);
 	//clip.OpenClip("assets/chirp.wav");
-	if (!texture.LoadTextureFromFile("assets/Image/dudette_01.png"))
-	{
-		return;
-	}
 }
 
 void TestTriangle::Finalize()
@@ -91,38 +87,12 @@ void TestTriangle::Render(float elapsedTime)
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glUseProgram(shader.GetProgram());
-
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, texture.GetTextureHandle());
-
-	int TextureID = glGetUniformLocation(shader.GetProgram(), "texture");
-
-	glUniform1i(TextureID, 0);
-
 	rectangle.Render(elapsedTime, mvpMatrix, mvpMatrixHandle);
 }
 
 void TestTriangle::InitRectangle()
 {
-	const char vShaderStr[] =
-		"uniform mat4 MVPMatrix;				  \n"
-		"attribute vec4 vPosition;                \n"
-		"void main()                              \n"
-		"{                                        \n"
-		"   gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;\n"
-		"   gl_Position = MVPMatrix * vPosition;  \n"
-		"}                                        \n";
-
-	const char fShaderStr[] =
-		"precision mediump float;\n"
-		"uniform sampler2D texture;\n"
-		"void main()                                  \n"
-		"{                                            \n"
-		"  vec4 TextureColor = texture2D(texture, gl_TexCoord[0].st);\n"
-		"  gl_FragColor = TextureColor;\n"
-		"}                                            \n";
-
-	shader.LoadFromSource(vShaderStr, fShaderStr);
+	shader.LoadFromFile("assets/shader.vert", "assets/shader.frag");
 
 	glBindAttribLocation(shader.GetProgram(), 0, "vPosition");
 
@@ -131,7 +101,6 @@ void TestTriangle::InitRectangle()
 	mvpMatrixHandle = glGetUniformLocation(shader.GetProgram(), "MVPMatrix");
 
 	rectangle.LoadVertices(vVertices, vTexCoords, arraysize(vVertices));
-	//rectangle.LoadTexCoords(vTexCoords, arraysize(vTexCoords));
 	rectangle.LoadIndices(vIndices, arraysize(vIndices));
 	rectangle.Initialize();
 }

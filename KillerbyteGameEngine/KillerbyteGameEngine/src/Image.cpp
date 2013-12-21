@@ -22,21 +22,24 @@ namespace KillerbyteGameEngine
 		Read(header, 1, 8);
 		if (png_sig_cmp(header, 0, 8))
 		{
-			goto error;
+			CloseFile();
+			return false;
 		}
 
 		// Create the png struct
 		png_structp png_ptr = png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
 		if (!png_ptr)
 		{
-			goto error;
+			CloseFile();
+			return false;
 		}
 
 		// Create the info struct
 		png_infop info_ptr = png_create_info_struct(png_ptr);
 		if (!info_ptr)
 		{
-			goto error;
+			CloseFile();
+			return false;
 		}
 
 		// Figured I would declare these in advance so all the data gets cleaned up
@@ -56,7 +59,8 @@ namespace KillerbyteGameEngine
 				delete[] data;
 			}
 
-			goto pngerror;
+			CloseFile();
+			return false;
 		}
 
 		// Initialize reading the png
@@ -100,14 +104,18 @@ namespace KillerbyteGameEngine
 		data = new png_byte[rowBytes * height];
 		if (!data)
 		{
-			goto pngerror;
+			png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+			CloseFile();
+			return false;
 		}
 
 		rowPtrs = new png_bytep[height];
 		if (!rowPtrs)
 		{
 			delete[] data;
-			goto pngerror;
+			png_destroy_read_struct(&png_ptr, &info_ptr, NULL);;
+			CloseFile();
+			return false;
 		}
 
 		// Now set the row pointers to point at the correct offsets of the image data
@@ -126,13 +134,5 @@ namespace KillerbyteGameEngine
 		CloseFile();
 
 		return true;
-
-		pngerror:
-			png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
-			goto error;
-
-		error:
-			CloseFile();
-			return false;
 	}
 }

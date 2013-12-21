@@ -169,6 +169,12 @@ obj/local/armeabi/objs/Killerbyte/Model.o: jni/../../src/Model.cpp \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_iter.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h \
+ ../../external-deps/libpng/include/png.h \
+ ../../external-deps/libpng/include/pnglibconf.h \
+ ../../external-deps/libpng/include/pngconf.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Platform.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Android.h \
@@ -189,7 +195,8 @@ obj/local/armeabi/objs/Killerbyte/Model.o: jni/../../src/Model.cpp \
  jni/../../src/Object.h \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
  jni/../../src/Math/Matrix44.h jni/../../src/Math/Vector3.h \
- C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
+ jni/../../src/Math/Vector2.h
 
 jni/../../src/Model.h:
 
@@ -533,6 +540,18 @@ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_raw_storage_
 
 C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_auto_ptr.h:
 
+../../external-deps/libpng/include/png.h:
+
+../../external-deps/libpng/include/pnglibconf.h:
+
+../../external-deps/libpng/include/pngconf.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/setjmp.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/machine/setjmp.h:
+
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES.h:
 
 C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/SLES/OpenSLES_Platform.h:
@@ -576,3 +595,5 @@ jni/../../src/Math/Matrix44.h:
 jni/../../src/Math/Vector3.h:
 
 C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath:
+
+jni/../../src/Math/Vector2.h:

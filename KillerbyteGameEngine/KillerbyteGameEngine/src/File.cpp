@@ -176,4 +176,15 @@ namespace KillerbyteGameEngine
 		}
 	}
 #endif
+
+	long File::GetLength()
+	{
+		long size;
+
+		fseek(file, 0, SEEK_END);
+		size = ftell(file);
+		rewind(file);
+
+		return size;
+	}
 }

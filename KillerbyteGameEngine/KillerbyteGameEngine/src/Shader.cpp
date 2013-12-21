@@ -1,4 +1,5 @@
 #include "Shader.h"
+#include "File.h"
 
 namespace KillerbyteGameEngine
 {
@@ -14,21 +15,49 @@ namespace KillerbyteGameEngine
 
 	bool Shader::LoadFromFile(const char* vertexPath, const char* fragmentPath)
 	{
-		// Open the vertex shader and check if file exists
-		std::ifstream vertexIn(vertexPath);
-		if (!vertexIn.good())
+		File file;
+		long length;
+		size_t result;
+		file.Open(vertexPath, "r");
+
+		length = file.GetLength();
+		char* VertexBuffer = (char*) malloc(sizeof(char) * length + 1);
+		if (VertexBuffer == NULL)
 		{
-			// Log the error
+			// Log error
 			return false;
 		}
-		
-		// Open the fragment shader and check if file exists
-		std::ifstream fragmentIn(fragmentPath);
-		if (!fragmentIn.good())
+
+		result = file.Read(VertexBuffer, 1, (size_t)length);
+		if (ferror(file.GetCFile()))
 		{
-			// Log the error
+			free(VertexBuffer);
 			return false;
 		}
+
+		VertexBuffer[length] = '\0';
+
+		file.CloseFile();
+		file.Open(fragmentPath, "r");
+
+		length = file.GetLength();
+		char* FragmentBuffer = (char*) malloc(sizeof(char) * length);
+		if (FragmentBuffer == NULL)
+		{
+			// Log error
+			return false;
+		}
+
+		result = file.Read(FragmentBuffer, 1, length);
+		if (ferror(file.GetCFile()))
+		{
+			free(FragmentBuffer);
+			return false;
+		}
+
+		FragmentBuffer[length] = '\0';
+
+		file.CloseFile();
 
 		// Create the shader program
 		if (program <= 0)
@@ -41,33 +70,7 @@ namespace KillerbyteGameEngine
 			}
 		}
 
-		// Read in the vertex shader code and then close the vertex file stream
-		std::ostringstream vertexCode;
-		while (vertexIn.good())
-		{
-			int c = vertexIn.get();
-			if (!vertexIn.eof())
-			{
-				vertexCode << (char)c;
-			}
-		}
-
-		vertexIn.close();
-
-		// Read in the fragment shader code and then close the fragment file stream
-		std::ostringstream fragmentCode;
-		while (fragmentIn.good())
-		{
-			int c = fragmentIn.get();
-			if (!fragmentIn.eof())
-			{
-				fragmentCode << (char)c;
-			}
-		}
-
-		fragmentIn.close();
-
-		return LoadFromSource(vertexCode.str().c_str(), fragmentCode.str().c_str());
+		return LoadFromSource(VertexBuffer, FragmentBuffer);
 	}
 
 	bool Shader::LoadFromSource(const char* vertexSource, const char* fragmentSource)

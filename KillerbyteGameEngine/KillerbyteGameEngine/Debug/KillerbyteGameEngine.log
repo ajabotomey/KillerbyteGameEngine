@@ -1,1 +1,19 @@
-﻿  KillerbyteGameEngine.vcxproj -> C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Debug\KillerbyteGameEngine.lib
+﻿  Shader.cpp
+  Appending Debug\Texture.obj
+  Appending Debug\Shader.obj
+  Appending Debug\Scene.obj
+  Appending Debug\PlatformWin32.obj
+  Appending Debug\Platform.obj
+  Appending Debug\Node.obj
+  Appending Debug\Model.obj
+  Appending Debug\Matrix44.obj
+  Appending Debug\MainWin32.obj
+  Appending Debug\LogManager.obj
+  Appending Debug\Image.obj
+  Appending Debug\Game.obj
+  Appending Debug\FileSystem.obj
+  Appending Debug\File.obj
+  Appending Debug\Camera.obj
+  Appending Debug\AudioController.obj
+  Appending Debug\AudioClip.obj
+  KillerbyteGameEngine.vcxproj -> C:\Users\AJ\Desktop\KillerbyteGameEngine\KillerbyteGameEngine\Debug\KillerbyteGameEngine.lib

@@ -8,6 +8,7 @@ LOCAL_SRC_FILES := \
     Camera.cpp \
     File.cpp \
     FileSystem.cpp \
+    Image.cpp \
     Game.cpp \
     LogManager.cpp \
     Node.cpp \
@@ -16,9 +17,10 @@ LOCAL_SRC_FILES := \
     Platform/Platform.cpp \
     Platform/PlatformAndroid.cpp \
     Scene.cpp \
-    Shader.cpp 
+    Shader.cpp \
+    Texture.cpp
 
-LOCAL_CFLAGS := -D__ANDROID__ -I"../../external-deps/OpenAL/include" -I"../../external-deps/TinyXML/include"
+LOCAL_CFLAGS := -D__ANDROID__ -I"../../external-deps/OpenAL/include" -I"../../external-deps/TinyXML/include" -I"../../external-deps/libpng/include" -I"../../external-deps/zlib/include"
 LOCAL_STATIC_LIBRARIES := android_native_app_glue
 
 include $(BUILD_STATIC_LIBRARY)
