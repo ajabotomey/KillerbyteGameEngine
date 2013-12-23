@@ -197,7 +197,17 @@ obj/local/armeabi/objs/Killerbyte/Node.o: jni/../../src/Node.cpp \
  C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/android/log.h \
  jni/../../src/File.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
- jni/../../src/Object.h
+ jni/../../src/Object.h jni/../../src/Model.h \
+ jni/../../src/Math/Matrix44.h jni/../../src/Math/Vector3.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
+ jni/../../src/Math/Vector2.h jni/../../src/Shader.h \
+ jni/../../src/Scene.h ../../external-deps/TinyXML/include/tinyxml2.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cctype \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_cctype.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/ctype.h \
+ C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/ctype.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstring \
+ jni/../../src/Camera.h jni/../../src/Math/Vector3.h
 
 jni/../../src/Node.h:
 
@@ -600,3 +610,33 @@ jni/../../src/File.h:
 C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio:
 
 jni/../../src/Object.h:
+
+jni/../../src/Model.h:
+
+jni/../../src/Math/Matrix44.h:
+
+jni/../../src/Math/Vector3.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath:
+
+jni/../../src/Math/Vector2.h:
+
+jni/../../src/Shader.h:
+
+jni/../../src/Scene.h:
+
+../../external-deps/TinyXML/include/tinyxml2.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cctype:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_cctype.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/ctype.h:
+
+C:/android-ndt/android-ndk-r9b/platforms/android-16/arch-arm/usr/include/../include/ctype.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstring:
+
+jni/../../src/Camera.h:
+
+jni/../../src/Math/Vector3.h:

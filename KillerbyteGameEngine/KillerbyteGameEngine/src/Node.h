@@ -3,6 +3,8 @@
 
 #include "Object.h"
 #include "Audio/AudioClip.h"
+#include "Model.h"
+#include "Camera.h"
 
 namespace KillerbyteGameEngine
 {
@@ -11,6 +13,7 @@ namespace KillerbyteGameEngine
 		friend class Scene;
 
 	public:
+
 		static Node* CreateNode(unsigned int id, std::string _name, std::string _alias);
 
 		// Addition / Removal nodes
@@ -26,10 +29,17 @@ namespace KillerbyteGameEngine
 		Node* searchNode(std::string name);
 
 		// Mutators
-		inline void SetAudioClip(AudioClip clip) { audioClip = clip; }
+		inline void SetAudioClip(AudioClip* clip) { audioClip = clip; }
+		inline void SetModel(Model* newModel) { model = newModel; }
+		inline void SetCamera(Camera* newCamera) { camera = newCamera; }
 
 		// Accessors
-		inline AudioClip GetAudioClip() const { return audioClip; }
+		inline AudioClip* GetAudioClip() const { return audioClip; }
+		//inline Model* GetModel() const { return model; }
+		inline Camera* GetCamera() const { return camera; }
+
+		// Deep copy operator
+		Node& operator = (const Node& other);
 	protected:
 		Node();
 		~Node();
@@ -42,7 +52,9 @@ namespace KillerbyteGameEngine
 		Node* prevNode;
 		Node* nextNode;
 
-		AudioClip audioClip;
+		AudioClip* audioClip;
+		Model* model;
+		Camera* camera;
 	};
 }
 

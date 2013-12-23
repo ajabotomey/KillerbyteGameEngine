@@ -202,7 +202,8 @@ obj/local/armeabi/objs/Killerbyte/Game.o: jni/../../src/Game.cpp \
  jni/../../src/Audio/AudioClip.h jni/../../src/File.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
  jni/../../src/Object.h jni/../../src/Scene.h jni/../../src/Node.h \
- jni/../../src/Audio/AudioClip.h \
+ jni/../../src/Audio/AudioClip.h jni/../../src/Model.h \
+ jni/../../src/Shader.h jni/../../src/Scene.h \
  ../../external-deps/TinyXML/include/tinyxml2.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cctype \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_cctype.h \
@@ -635,6 +636,12 @@ jni/../../src/Scene.h:
 jni/../../src/Node.h:
 
 jni/../../src/Audio/AudioClip.h:
+
+jni/../../src/Model.h:
+
+jni/../../src/Shader.h:
+
+jni/../../src/Scene.h:
 
 ../../external-deps/TinyXML/include/tinyxml2.h:
 

@@ -23,15 +23,16 @@ namespace KillerbyteGameEngine
 		void LoadScene(const char* filename);
 
 		inline unsigned int GetNodeCount() { return nodeCount; }
-
 		inline Node* GetFirstNode() { return firstNode; }
 		inline Node* GetLastNode() { return lastNode; }
+		inline Camera* GetActiveCamera() { return activeCamera->GetCamera(); }
 
 		Node* FindNode(std::string alias);
 	protected:
 		Scene();
 	private:
 		void LoadAndroidScene(const char* filename);
+		Vector3 LoadVectorFromXML(XMLElement* element);
 
 		Node* firstNode;
 		Node* lastNode;
@@ -41,6 +42,7 @@ namespace KillerbyteGameEngine
 		unsigned int height;
 
 		XMLDocument doc;
+		Node* activeCamera;
 	};
 }
 

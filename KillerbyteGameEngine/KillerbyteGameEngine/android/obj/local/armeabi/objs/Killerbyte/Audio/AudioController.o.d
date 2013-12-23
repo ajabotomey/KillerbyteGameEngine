@@ -198,7 +198,12 @@ obj/local/armeabi/objs/Killerbyte/Audio/AudioController.o: \
  jni/../../src/Audio/AudioClip.h jni/../../src/File.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cstdio \
  jni/../../src/Object.h jni/../../src/Scene.h jni/../../src/Node.h \
- jni/../../src/Audio/AudioClip.h \
+ jni/../../src/Audio/AudioClip.h jni/../../src/Model.h \
+ jni/../../src/Math/Matrix44.h jni/../../src/Math/Vector3.h \
+ C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath \
+ jni/../../src/Math/Vector2.h jni/../../src/Shader.h \
+ jni/../../src/Scene.h jni/../../src/Camera.h \
+ jni/../../src/Math/Vector3.h \
  ../../external-deps/TinyXML/include/tinyxml2.h \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cctype \
  C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/stl/_cctype.h \
@@ -613,6 +618,24 @@ jni/../../src/Scene.h:
 jni/../../src/Node.h:
 
 jni/../../src/Audio/AudioClip.h:
+
+jni/../../src/Model.h:
+
+jni/../../src/Math/Matrix44.h:
+
+jni/../../src/Math/Vector3.h:
+
+C:/android-ndt/android-ndk-r9b/sources/cxx-stl/stlport/stlport/cmath:
+
+jni/../../src/Math/Vector2.h:
+
+jni/../../src/Shader.h:
+
+jni/../../src/Scene.h:
+
+jni/../../src/Camera.h:
+
+jni/../../src/Math/Vector3.h:
 
 ../../external-deps/TinyXML/include/tinyxml2.h:
 

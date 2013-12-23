@@ -4,7 +4,7 @@ namespace KillerbyteGameEngine
 {
 	Camera::Camera()
 	{
-		movementSpeed = 0.1f;
+		
 	}
 
 	Camera::~Camera()
@@ -17,7 +17,6 @@ namespace KillerbyteGameEngine
 		Matrix44 modelView, rotation, translation;
 		
 		position = camera; // Where the camera is positioned
-		direction = target; // Where the camera is facing
 
 		Vector3 forward = target - camera;
 		forward.normalize();
@@ -116,12 +115,5 @@ namespace KillerbyteGameEngine
 		projectionMatrix = ortho;
 
 		return projectionMatrix;
-	}
-
-	void Camera::MoveCamera(float x, float y, float z)
-	{
-		position.x += x;
-		position.y += y;
-		position.z += z;
 	}
 }

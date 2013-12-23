@@ -48,10 +48,11 @@ TestTriangle::TestTriangle()
 void TestTriangle::Initialize()
 {
 	InitRectangle();
-	scene = new Scene("assets/test.xml");
+	scene = new Scene("assets/Scene/test.xml");
 	//GetAudioController()->LoadClip("assets/chirp.wav", true);
 	//GetAudioController()->LoadClip("assets/noise.wav", true);
-	//clip.OpenClip("assets/chirp.wav");
+	//clip.OpenClip("assets/chirp.wav");]
+	texture.LoadTextureFromFile("assets/Image/dudette_01.png");
 }
 
 void TestTriangle::Finalize()
@@ -87,7 +88,8 @@ void TestTriangle::Render(float elapsedTime)
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glUseProgram(shader.GetProgram());
-	rectangle.Render(elapsedTime, mvpMatrix, mvpMatrixHandle);
+
+	rectangle.Render(elapsedTime);
 }
 
 void TestTriangle::InitRectangle()
@@ -132,11 +134,11 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 			break;
 
 		case Keyboard::KEY_O:
-			GetAudioController()->PauseClip("assets/chirp.wav");
+			GetAudioController()->PauseClip("chirp");
 			break;
 
 		case Keyboard::KEY_I:
-			GetAudioController()->StopClip("assets/chirp.wav");
+			GetAudioController()->StopClip("chirp");
 			break;
 		}
 	}

@@ -90,21 +90,21 @@ namespace KillerbyteGameEngine
 	{
 		// Find the node with our data
 		Node* audioNode = Scene::GetScene()->FindNode(name);
-		alSourcePlay(audioNode->GetAudioClip().GetSource());
+		alSourcePlay((*audioNode->GetAudioClip()).GetSource());
 	}
 
 	void AudioController::PauseALClip(std::string name)
 	{
 		// Find the node with our data
 		Node* audioNode = Scene::GetScene()->FindNode(name);
-		alSourcePause(audioNode->GetAudioClip().GetSource());
+		alSourcePause((*audioNode->GetAudioClip()).GetSource());
 	}
 
 	void AudioController::StopALClip(std::string name)
 	{
 		// Find the node with our data
 		Node* audioNode = Scene::GetScene()->FindNode(name);
-		alSourceStop(audioNode->GetAudioClip().GetSource());
+		alSourceStop((*audioNode->GetAudioClip()).GetSource());
 	}
 #else
 	void AudioController::InitializeSL()
@@ -231,8 +231,8 @@ namespace KillerbyteGameEngine
 
 		// Search through the scene for our node
 		Node* audioNode = Scene::GetScene()->FindNode(name);
-		buffer = audioNode->GetAudioClip().GetData();
-		length = audioNode->GetAudioClip().GetLength();
+		buffer = (*audioNode->GetAudioClip()).GetData();
+		length = (*audioNode->GetAudioClip()).GetLength();
 		
 		result = (*player)->GetPlayState(player, &currentPlayState);
 		if (currentPlayState == SL_PLAYSTATE_PAUSED)

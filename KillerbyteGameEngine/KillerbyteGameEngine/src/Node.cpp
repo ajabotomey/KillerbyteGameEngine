@@ -4,7 +4,7 @@ namespace KillerbyteGameEngine
 {
 	Node::Node()
 	{
-
+		
 	}
 
 	Node::~Node()
@@ -20,5 +20,33 @@ namespace KillerbyteGameEngine
 		node->alias = _alias;
 
 		return node;
+	}
+
+	Node& Node::operator = (const Node& other)
+	{
+		name = other.name;
+		alias = other.alias;
+		
+		if (other.audioClip)
+		{
+			audioClip = other.audioClip;
+		}
+
+		if (other.camera)
+		{
+			camera = other.camera;
+		}
+
+		if (other.model)
+		{
+			model = other.model;
+		}
+
+		parentNode = other.parentNode;
+		firstNode = other.firstNode;
+		nextNode = other.nextNode;
+		prevNode = other.prevNode;
+
+		return *this;
 	}
 }
