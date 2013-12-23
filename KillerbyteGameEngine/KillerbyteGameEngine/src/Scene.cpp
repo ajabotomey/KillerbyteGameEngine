@@ -109,12 +109,12 @@ namespace KillerbyteGameEngine
 		const char* vertexPath = shader->FirstChildElement("vertex")->Attribute("path");
 		const char* fragmentPath = shader->FirstChildElement("fragment")->Attribute("path");
 
-		//Node* playerNode = Node::CreateNode(nodeCount + 1, "PlayerNode", "Player");
-		//Model* model = new Model;
-		//model->SetPosition(Vector3(playerX, playerY, 0.0));
-		//model->CreateRectangle(Vector2(playerWidth, playerHeight), vertexPath, fragmentPath);
-		//playerNode->SetModel(model);
-		//AddNode(playerNode);
+		Node* playerNode = Node::CreateNode(nodeCount + 1, "PlayerNode", "Player");
+		Model* model = new Model;
+		model->SetPosition(Vector3(playerX, playerY, 0.0));
+		model->CreateRectangle(Vector2(playerWidth, playerHeight), vertexPath, fragmentPath);
+		playerNode->SetModel(model);
+		AddNode(playerNode);
 
 		// Now to create that node
 		return;
@@ -123,6 +123,11 @@ namespace KillerbyteGameEngine
 	// Simply add the node onto the end of the line
 	void Scene::AddNode(Node* node)
 	{
+		if (node->GetScene() == NULL)
+		{
+			node->SetScene(this);
+		}
+
 		if (firstNode == NULL)
 		{
 			firstNode = node;
@@ -145,6 +150,28 @@ namespace KillerbyteGameEngine
 			if (child->alias == alias)
 			{
 				return child;
+			}
+		}
+	}
+
+	void Scene::Update(float elapsedTime)
+	{
+		for (Node* child = GetFirstNode(); child != NULL; child = child->GetNextNode())
+		{
+			if (child->type == Node::NodeType::MODEL_NODE)
+			{
+				child->GetModel()->Update(elapsedTime, activeCamera->GetCamera()->GetViewMatrix(), activeCamera->GetCamera()->GetProjectionMatrix());
+			}
+		}
+	}
+
+	void Scene::Render(float elapsedTime)
+	{
+		for (Node* child = GetFirstNode(); child != NULL; child = child->GetNextNode())
+		{
+			if (child->type == Node::NodeType::MODEL_NODE)
+			{
+				child->GetModel()->Render(elapsedTime);
 			}
 		}
 	}

@@ -4,7 +4,7 @@ namespace KillerbyteGameEngine
 {
 	Node::Node()
 	{
-		
+		type = EMPTY_NODE;
 	}
 
 	Node::~Node()

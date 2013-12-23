@@ -31,15 +31,12 @@ namespace KillerbyteGameEngine
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLubyte), &indices[0], GL_STATIC_DRAW);
 	}
 
-	void Model::Update(float elapsedTime)
+	void Model::Update(float elapsedTime, Matrix44 viewMatrix, Matrix44 projMatrix)
 	{
 		// At the moment we are only dealing with translation at the moment
 		modelMatrix.translation(position);
-		// Get the view matrix - Figure out a way to access the scene
-		
 
-
-		//mvpMatrix = modelMatrix * viewMatrix * projMatrix;
+		mvpMatrix = modelMatrix * viewMatrix * projMatrix;
 	}
 
 	//void Model::Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle)
@@ -53,7 +50,7 @@ namespace KillerbyteGameEngine
 	//	glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_BYTE, 0);
 	//}
 
-	void Model::Render(float elapsedTime, Matrix44 mvpMatrix)
+	void Model::Render(float elapsedTime)
 	{
 		glUseProgram(shader.GetProgram());
 
@@ -62,7 +59,7 @@ namespace KillerbyteGameEngine
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
 		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid*)12);
 
-		glUniformMatrix4fv(shader.GetProgram(), 1, GL_FALSE, (GLfloat*)&mvpMatrix(0, 0));
+		glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (GLfloat*)&mvpMatrix(0, 0));
 		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_BYTE, 0);
 	}
 

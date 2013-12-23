@@ -35,6 +35,8 @@ private: // Variables
 	Shader shader;
 
 	Texture texture;
+
+	std::vector<Scene*> sceneList;
 };
 
 #endif

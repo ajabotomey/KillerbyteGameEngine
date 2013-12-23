@@ -62,8 +62,9 @@ void TestTriangle::Finalize()
 
 void TestTriangle::Update(float elapsedTime)
 {
-	// First update the ractangle
-	rectangle.Update(elapsedTime);
+	//// First update the ractangle
+	//rectangle.Update(elapsedTime);
+	camera = scene->GetActiveCamera();
 
 	// We need the half extents of the screen
 	float halfWidth = GetWidth() / 2;
@@ -75,9 +76,8 @@ void TestTriangle::Update(float elapsedTime)
 	// Create the view matrix
 	viewMatrix = camera->LookAt(Vector3(0.0, 0.0, 1.0), Vector3(0.0, 0.0, 0.0), Vector3(0.0, 1.0, 0.0));
 
-	mvMatrix = rectangle.GetModelMatrix() * viewMatrix;
-
-	mvpMatrix = mvMatrix * projMatrix;
+	// Update the scene last because we need those matrices
+	scene->Update(elapsedTime);
 }
 
 void TestTriangle::Render(float elapsedTime)
@@ -87,9 +87,10 @@ void TestTriangle::Render(float elapsedTime)
 	glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	glUseProgram(shader.GetProgram());
+	//glUseProgram(shader.GetProgram());
 
-	rectangle.Render(elapsedTime);
+	//rectangle.Render(elapsedTime);
+	scene->Render(elapsedTime);
 }
 
 void TestTriangle::InitRectangle()
@@ -110,6 +111,7 @@ void TestTriangle::InitRectangle()
 void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 {
 	float x;
+	Model* player = scene->FindNode("Player")->GetModel();
 
 	if (evt == Keyboard::KEY_DOWN)
 	{
@@ -118,15 +120,15 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 		case Keyboard::KEY_A:
 		case Keyboard::KEY_CAP_A:
 		case Keyboard::KEY_LEFTARROW:
-			x = rectangle.GetPosition().getX() - 0.005;
-			rectangle.SetPositionX(x);
+			x = player->GetPosition().getX() - 0.005;
+			player->SetPositionX(x);
 			break;
 
 		case Keyboard::KEY_D:
 		case Keyboard::KEY_CAP_D:
 		case Keyboard::KEY_RIGHTARROW:
-			x = rectangle.GetPosition().getX() + 0.005;
-			rectangle.SetPositionX(x);
+			x = player->GetPosition().getX() + 0.005;
+			player->SetPositionX(x);
 			break;
 
 		case Keyboard::KEY_P:
@@ -149,15 +151,15 @@ void TestTriangle::KeyEvent(Keyboard::KeyEvent evt, int key)
 		case Keyboard::KEY_A:
 		case Keyboard::KEY_CAP_A:
 		case Keyboard::KEY_LEFTARROW:
-			x = rectangle.GetPosition().getX() + 0;
-			rectangle.SetPositionX(x);
+			x = player->GetPosition().getX() + 0;
+			player->SetPositionX(x);
 			break;
 
 		case Keyboard::KEY_D:
 		case Keyboard::KEY_CAP_D:
 		case Keyboard::KEY_RIGHTARROW:
-			x = rectangle.GetPosition().getX() - 0;
-			rectangle.SetPositionX(x);
+			x = player->GetPosition().getX() - 0;
+			player->SetPositionX(x);
 			break;
 		}
 	}

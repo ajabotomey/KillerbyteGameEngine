@@ -28,6 +28,10 @@ namespace KillerbyteGameEngine
 		inline Camera* GetActiveCamera() { return activeCamera->GetCamera(); }
 
 		Node* FindNode(std::string alias);
+
+		// Update and render the scene
+		void Update(float elapsedTime);
+		void Render(float elapsedTime);
 	protected:
 		Scene();
 	private:

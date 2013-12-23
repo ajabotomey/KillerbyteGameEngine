@@ -20,7 +20,6 @@ namespace KillerbyteGameEngine
 	class Model : public Object
 	{
 	public:
-
 		struct Vertex
 		{
 			Vector3 position;
@@ -40,11 +39,11 @@ namespace KillerbyteGameEngine
 		void CreateRectangle(Vector2 dimensions, const char* vertexPath, const char* fragmentPath);
 
 		void Initialize();
-		void Update(float elapsedTime);
+		void Update(float elapsedTime, Matrix44 viewMatrix, Matrix44 projMatrix);
 		// This will eventually go back to only one parameter
 		// Shader will eventually become a member of Model
 		//void Render(float elapsedTime, Matrix44 mvpMatrix, GLint handle);
-		void Render(float elapsedTime, Matrix44 mvpMatrix);
+		void Render(float elapsedTime);
 		void Shutdown();
 
 		// Accessors

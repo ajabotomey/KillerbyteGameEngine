@@ -11,8 +11,15 @@ namespace KillerbyteGameEngine
 	class Node : public Object
 	{
 		friend class Scene;
-
 	public:
+
+		enum NodeType
+		{
+			AUDIO_NODE,
+			CAMERA_NODE,
+			MODEL_NODE,
+			EMPTY_NODE
+		};
 
 		static Node* CreateNode(unsigned int id, std::string _name, std::string _alias);
 
@@ -29,13 +36,15 @@ namespace KillerbyteGameEngine
 		Node* searchNode(std::string name);
 
 		// Mutators
-		inline void SetAudioClip(AudioClip* clip) { audioClip = clip; }
-		inline void SetModel(Model* newModel) { model = newModel; }
-		inline void SetCamera(Camera* newCamera) { camera = newCamera; }
+		inline void SetScene(Scene* currentScene) { scene = currentScene; }
+		inline void SetAudioClip(AudioClip* clip) { audioClip = clip; type = AUDIO_NODE; }
+		inline void SetModel(Model* newModel) { model = newModel; type = MODEL_NODE; }
+		inline void SetCamera(Camera* newCamera) { camera = newCamera; type = CAMERA_NODE; }
 
 		// Accessors
+		inline Scene* GetScene() { return scene; }
 		inline AudioClip* GetAudioClip() const { return audioClip; }
-		//inline Model* GetModel() const { return model; }
+		inline Model* GetModel() const { return model; }
 		inline Camera* GetCamera() const { return camera; }
 
 		// Deep copy operator
@@ -51,6 +60,12 @@ namespace KillerbyteGameEngine
 		Node* firstNode;
 		Node* prevNode;
 		Node* nextNode;
+
+		// A pointer to the scene that this node is a part of
+		Scene* scene;
+
+		// Need a node type
+		NodeType type;
 
 		AudioClip* audioClip;
 		Model* model;
